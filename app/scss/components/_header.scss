@@ -1,0 +1,73 @@
+.header {
+    margin: 48px 0 21px;
+
+    &__items {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 10px;
+        flex: 0 0 auto;
+        margin-right: 108px;
+    }
+
+    &__logo-img {}
+
+    &__menu {
+        margin-right: 10px;
+        flex: 1 0 auto;
+    }
+
+    &__call-us {
+        margin-right: 74px;
+    }
+
+    &__button {
+        background-color: $black;
+
+        &:focus {
+            box-shadow: $focusBs;
+
+        }
+
+        &:hover {
+            color: $yellow;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+}
+
+
+
+.call-us {
+    color: $black;
+    align-items: center;
+    display: flex;
+    transition: color 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+
+    &:focus {
+        box-shadow: $focusBs;
+    }
+
+
+
+    &::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/sprite.svg#call-us');
+        background-repeat: no-repeat;
+        margin-right: 23px;
+        transition: filter 0.1s;
+    }
+
+    &:hover {
+        color: $yellow;
+
+        &::before {
+            filter: invert(73%) sepia(52%) saturate(886%) hue-rotate(354deg) brightness(96%) contrast(100%);
+        }
+    }
+}
