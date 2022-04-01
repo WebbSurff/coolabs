@@ -78,45 +78,9 @@ function images() {
         .pipe(dest('dist/images'))
 }
 
-// function svgSprites() {
-//     return src('app/images/icons/*.svg')
-//         .pipe(cheerio({
-//             run: ($) => {
-//                 $("[fill]").removeAttr("fill");
-//                 $("[stroke]").removeAttr("stroke");
-//                 $("[style]").removeAttr("style");
-//             },
-//             parserOptions: {
-//                 xmlMode: true
-//             },
-//         }))
-//         .pipe(replace('&gt;', '>')) // боремся с заменой символа 
-//         .pipe(
-//             svgSprite({
-//                 mode: {
-//                     stack: {
-//                         sprite: '../sprite.svg',
-//                     },
-//                 },
-//             })
-//         )
-//         .pipe(dest('app/images'));
-// }
-
-
 function svgSprites() {
     return src('app/images/icons/*.svg')
-        .pipe(cheerio({
-            run: ($) => {
-                $("[fill]").removeAttr("fill");
-                $("[stroke]").removeAttr("stroke");
-                $("[style]").removeAttr("style");
-            },
-            parserOptions: {
-                xmlMode: true
-            },
-        }))
-        .pipe(replace('&gt;', '>')) // боремся с заменой символа 
+        .pipe(replace('&gt;', '>'))
         .pipe(
             svgSprite({
                 mode: {
@@ -128,6 +92,8 @@ function svgSprites() {
         )
         .pipe(dest('app/images'));
 }
+
+
 
 
 

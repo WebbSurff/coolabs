@@ -21,53 +21,44 @@
 
     &__call-us {
         margin-right: 74px;
-    }
-
-    &__button {
-        background-color: $black;
+        color: $beige-100;
+        align-items: center;
+        display: flex;
+        transition: color 0.3s, box-shadow 0.3s;
+        border-radius: 20px;
 
         &:focus {
             box-shadow: $focusBs;
+        }
 
+        &::before {
+            content: '';
+            width: 23px;
+            height: 21px;
+            background-image: url(../images/sprite.svg#call-us);
+            background-repeat: no-repeat;
+            margin-right: 23px;
+            transition: filter 0.1s;
         }
 
         &:hover {
-            color: $yellow;
-            background-color: rgba(0, 0, 0, 0.8);
+            color: $pistachio;
+
+            &::before {
+                filter: invert(23%) sepia(34%) saturate(187%) hue-rotate(18deg) brightness(86%) contrast(89%);
+            }
         }
     }
-}
 
+    &__button {
+        background-color: $brown-700;
 
+        &:focus {
+            box-shadow: $focusBs;
+        }
 
-.call-us {
-    color: $black;
-    align-items: center;
-    display: flex;
-    transition: color 0.3s, box-shadow 0.3s;
-    border-radius: 20px;
-
-    &:focus {
-        box-shadow: $focusBs;
-    }
-
-
-
-    &::before {
-        content: '';
-        width: 18px;
-        height: 18px;
-        background-image: url('../images/sprite.svg#call-us');
-        background-repeat: no-repeat;
-        margin-right: 23px;
-        transition: filter 0.1s;
-    }
-
-    &:hover {
-        color: $yellow;
-
-        &::before {
-            filter: invert(73%) sepia(52%) saturate(886%) hue-rotate(354deg) brightness(96%) contrast(100%);
+        &:hover {
+            background-color: $beige-100;
         }
     }
 }

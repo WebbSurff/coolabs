@@ -1,0 +1,113 @@
+.hero {
+    padding-bottom: 100px;
+    margin-bottom: 85px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 35%;
+        top: -20%;
+        background-color: $main-color;
+        z-index: -1;
+    }
+
+
+
+    &__inner {
+        background-repeat: no-repeat;
+        background-size: 870px 830px;
+        background-position: right;
+    }
+
+    &__content {
+        padding: 139px 0px 134px;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-repeat: no-repeat;
+            width: 124px;
+            height: 100px;
+            background-image: url(../images/sprite.svg#ornament);
+            left: 1px;
+            bottom: -14%;
+            position: absolute;
+        }
+    }
+
+    &__title {
+        margin-bottom: 48px;
+        font-size: 72px;
+        line-height: 1.1;
+        max-width: 720px;
+
+    }
+
+    &__text {
+        max-width: 685px;
+        margin-bottom: 64px;
+        font-size: 24px;
+        line-height: 1.4;
+        @include line-clamp (5);
+    }
+}
+
+.hero-info {
+    padding-left: 21px;
+    border: 3px solid #205b6c;
+    display: flex;
+    max-width: 1015px;
+    align-items: center;
+    position: relative;
+    height: 119px;
+
+    &__location {
+        margin-right: 226px;
+    }
+
+    &__name {
+        color: $main-color;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    &__place {
+        font-size: 24px;
+    }
+
+    &__link {
+        width: 165px;
+        position: absolute;
+        right: -3px;
+        height: 120px;
+        background-color: $main-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: box-shadow 0.3s;
+
+        &::before {
+            content: '';
+            background-size: 100%;
+            background-image: url('../images/sprite.svg#arrow-hero');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 105px;
+            transition: transform 0.3s;
+            height: 25px;
+        }
+
+        &:focus {
+            box-shadow: $focusBs;
+        }
+
+        &:hover {
+            &::before {
+                transform: translateX(10px);
+            }
+        }
+    }
+}
