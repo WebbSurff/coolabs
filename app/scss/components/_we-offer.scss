@@ -1,5 +1,16 @@
 .we-offer {
     margin-bottom: 72px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 292px;
+        background-color: $main-color;
+        left: 0;
+        top: -78px;
+    }
 
     &__inner {
         display: flex;
