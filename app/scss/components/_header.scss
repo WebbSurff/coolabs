@@ -1,61 +1,50 @@
 .header {
     margin: 48px 0 21px;
 
-    &__items {
+    &__inner {
         display: flex;
         align-items: center;
     }
 
     &__logo {
-        margin-right: 10px;
-        flex: 0 0 auto;
         margin-right: 108px;
+        border-radius: 10px;
     }
 
-    &__logo-img {}
-
     &__menu {
-        margin-right: 10px;
         flex: 1 0 auto;
     }
 
     &__call-us {
         margin-right: 74px;
         color: $beige-100;
-        align-items: center;
         display: flex;
-        transition: color 0.3s, box-shadow 0.3s;
+        align-items: center;
         border-radius: 20px;
 
-        &:focus {
-            box-shadow: $focusBs;
-        }
-
-        &::before {
-            content: '';
-            width: 23px;
-            height: 21px;
-            background-image: url(../images/sprite.svg#call-us);
-            background-repeat: no-repeat;
-            margin-right: 23px;
-            transition: filter 0.1s;
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: #D5BB96;
+            margin-right: 10px;
+            transition: fill 0.3s;
         }
 
         &:hover {
             color: $pistachio;
 
-            &::before {
-                filter: invert(23%) sepia(34%) saturate(187%) hue-rotate(18deg) brightness(86%) contrast(89%);
+            svg {
+                fill: $pistachio;
             }
         }
     }
 
     &__button {
         background-color: $brown-700;
-
-        &:focus {
-            box-shadow: $focusBs;
-        }
+        padding: 16px 66px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
 
         &:hover {
             background-color: $beige-100;

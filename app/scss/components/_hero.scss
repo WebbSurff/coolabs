@@ -1,113 +1,98 @@
 .hero {
-    padding-bottom: 100px;
     margin-bottom: 85px;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
+        height: 100vh;
+        background-color: $main-color;
         bottom: 0;
         right: 0;
         width: 35%;
-        top: -20%;
-        background-color: $main-color;
         z-index: -1;
     }
 
-
-
     &__inner {
         background-repeat: no-repeat;
-        background-size: 870px 830px;
-        background-position: right;
+        background-size: 50.5% 90%;
+        background-position: top right;
     }
 
     &__content {
-        padding: 139px 0px 134px;
         position: relative;
+        min-height: calc(100vh - 124px);
+        display: flex;
+        flex-direction: column;
 
         &::after {
-            content: '';
-            background-repeat: no-repeat;
-            width: 124px;
-            height: 100px;
-            background-image: url(../images/sprite.svg#ornament);
-            left: 1px;
-            bottom: -14%;
-            position: absolute;
+            content: "\a.....\a.....\a.....\a.....";
+            display: block;
+            white-space: normal;
+            color: $main-color;
+            font-size: 33px;
+            letter-spacing: 19px;
+            line-height: 0.96;
+            max-width: 100px;
+            font-weight: 900;
+            font-family: system-ui;
         }
     }
 
     &__title {
         margin-bottom: 48px;
+        margin-top: auto;
         font-size: 72px;
         line-height: 1.1;
         max-width: 720px;
-
     }
 
     &__text {
         max-width: 685px;
         margin-bottom: 64px;
-        font-size: 24px;
-        line-height: 1.4;
         @include line-clamp (5);
     }
-}
 
-.hero-info {
-    padding-left: 21px;
-    border: 3px solid #205b6c;
-    display: flex;
-    max-width: 1015px;
-    align-items: center;
-    position: relative;
-    height: 119px;
+    &__info {
+        padding: 24px 21px;
+        border: 3px solid #205b6c;
+        display: flex;
+        position: relative;
+        margin-bottom: auto;
+        width: 59%;
+    }
 
-    &__location {
-        margin-right: 226px;
+    &__box {
+        flex: 0 1 44%;
+        margin-right: 15px;
     }
 
     &__name {
         color: $main-color;
-        display: inline-block;
         margin-bottom: 10px;
+        display: block;
     }
 
     &__place {
         font-size: 24px;
+        @include line-clamp(2);
     }
 
-    &__link {
-        width: 165px;
+    &__arrow {
         position: absolute;
+        width: 165px;
         right: -3px;
-        height: 120px;
+        top: -1px;
+        bottom: -1px;
         background-color: $main-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: box-shadow 0.3s;
+        fill: #fff;
+        background-image: url('../images/hero/arrow-hero.svg');
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: center;
 
-        &::before {
-            content: '';
-            background-size: 100%;
-            background-image: url('../images/sprite.svg#arrow-hero');
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 105px;
-            transition: transform 0.3s;
-            height: 25px;
-        }
-
-        &:focus {
-            box-shadow: $focusBs;
-        }
-
-        &:hover {
-            &::before {
-                transform: translateX(10px);
-            }
+        svg {
+            width: 120px;
         }
     }
 }

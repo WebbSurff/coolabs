@@ -1,9 +1,6 @@
 $poppins: 'Poppins',
 Tahoma;
 
-$dmSans: 'DM Sans',
-Tahoma;
-
 $brown-900:#4f422d;
 $brown-700:#957748;
 
@@ -12,8 +9,17 @@ $pistachio:#b3b192;
 
 $main-color:#205b6c;
 
-
-$focusBs: 0 0 0 2px #f3b611b3;
+.ornament {
+    content: "\a.....\a.....\a.....\a.....";
+    position: absolute;
+    white-space: normal;
+    font-size: 33px;
+    letter-spacing: 19px;
+    line-height: 0.96;
+    max-width: 135px;
+    font-weight: 900;
+    font-family: system-ui;
+}
 
 $xxl: 1320;
 $xl: 1200;

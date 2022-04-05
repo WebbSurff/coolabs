@@ -11,19 +11,10 @@
     }
 
     &__link {
-        transition: color 0.3s, box-shadow 0.3s;
         border-radius: 20px;
         color: $pistachio;
 
         &--active {
-            color: $main-color;
-        }
-
-        &:focus {
-            box-shadow: $focusBs;
-        }
-
-        &:hover {
             color: $main-color;
         }
     }

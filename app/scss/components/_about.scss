@@ -1,7 +1,6 @@
 .about {
     background-repeat: no-repeat;
-    background-size: 50%;
-    margin-bottom: 72px;
+    background-size: 50% 100%;
     background-position: left;
 
     &__content {
@@ -26,42 +25,34 @@
         }
     }
 
-    &__subtitle {
-        margin-bottom: 36px;
-    }
-
     &__title {
         max-width: 425px;
         margin-bottom: 36px;
     }
 
     &__text {
-        max-width: 677px;
-        font-size: 24px;
-        line-height: 1.4;
         @include line-clamp (5);
     }
 
     &__info {
         display: flex;
+        justify-content: space-between;
     }
 
     &__item {
         color: $brown-900;
+        flex: 0 1 115px;
 
         &:not(:last-child) {
-            margin-right: 81px;
-            padding-right: 80px;
             position: relative;
 
-            &::before {
+            &::after {
                 content: '';
-                position: absolute;
-                right: -5px;
-                top: 50%;
-                transform: translateY(-50%);
                 width: 20px;
                 height: 20px;
+                position: absolute;
+                right: -80%;
+                top: 50%;
                 background-color: $main-color;
                 border-radius: 50%;
             }
@@ -69,6 +60,7 @@
     }
 
     &__number {
+        display: block;
         font-family: $poppins;
         font-size: 48px;
         line-height: 1.2;
@@ -80,9 +72,5 @@
         font-size: 25px;
         line-height: 1.4;
         max-width: 117px;
-
-        &--small {
-            max-width: 100px;
-        }
     }
 }

@@ -1,0 +1,59 @@
+.our-photos {
+    margin-bottom: 100px;
+
+    &__inner {
+        position: relative;
+
+        &::after,
+        &::before {
+            @extend .ornament;
+        }
+
+        &::after {
+            right: 0;
+            top: 0;
+            color: $main-color;
+        }
+
+        &::before {
+            left: 0;
+            top: 18%;
+            color: $brown-900;
+        }
+    }
+
+    &__box {
+        max-width: 496px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    &__title {
+        max-width: 167px;
+        margin: 0 auto 41px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 560px));
+        grid-gap: 19px;
+    }
+
+    &__zoom {
+        display: block;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &--margin {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+    }
+}

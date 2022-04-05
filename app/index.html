@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Coolabs Working Space</title>
 </head>
@@ -16,12 +17,12 @@
 
             <header class="header">
                 <div class="container">
-                    <div class="header__items">
+                    <div class="header__inner">
                         <a class="header__logo logo" href="#">
-                            <img class="header__logo-img logo__img" src="images/header/logo.svg" alt="logo" width="162"
+                            <img class="header__logo-img" src="images/header/logo.svg" alt="logo coolabs" width="162"
                                 height="46">
                         </a>
-                        <div class="header__menu menu">
+                        <nav class="header__menu menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
                                     <a class="menu__link menu__link--active" href="#">
@@ -49,8 +50,11 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </nav>
                         <a class="header__call-us" href="tel:+1234567890">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#call-us"></use>
+                            </svg>
                             +123 456 7890
                         </a>
                         <button class="header__button button" type="button">
@@ -64,93 +68,85 @@
 
                 <section class="hero">
                     <div class="container">
-                        <div class="hero__inner" style="background-image: url('../images/hero/hero-bg1.jpg');">
+                        <div class="hero__inner" style="background-image: url('images/hero/hero-bg1.jpg');">
                             <div class="hero__content">
                                 <h1 class="hero__title title">
                                     Work Comfortably
                                     in Our Coworking Space
                                 </h1>
-                                <div class="hero__text">
-                                    <p>
-                                        Providing you refreshing atmosphere to work together outside
-                                        your usual office setting. We are available 24/7 for booking.
-                                        Suitable for individual and group working.
-                                    </p>
-                                </div>
-                                <div class="hero__info hero-info">
-                                    <div class="hero-info__location">
-                                        <span class="hero-info__name">
+                                <p class="hero__text text">
+                                    Providing you refreshing atmosphere to work together outside
+                                    your usual office setting. We are available 24/7 for booking.
+                                    Suitable for individual and group working.
+                                </p>
+                                <div class="hero__info">
+                                    <div class="hero__box">
+                                        <span class="hero__name">
                                             Location
                                         </span>
-                                        <div class="hero-info__place">
+                                        <span class="hero__place">
                                             New York, United States
-                                        </div>
+                                        </span>
                                     </div>
-                                    <div class="hero-info__type">
-                                        <span class="hero-info__name">
+                                    <div class="hero__box">
+                                        <span class="hero__name">
                                             Space Type
                                         </span>
-                                        <div class="hero-info__place">
+                                        <span class="hero__place">
                                             Coworking Space
-                                        </div>
-                                    </div>
-                                    <a class="hero-info__link" href="#">
-                                        <span class="sr-only">
-                                            tup to booking
                                         </span>
-                                    </a>
+                                    </div>
+                                    <span class="hero__arrow"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="about" style="background-image: url('../images/about/about-bg2.jpg');">
+                <section class="about" style="background-image: url('images/about/about-bg2.jpg');">
                     <div class="container">
                         <div class="about__content">
                             <div class="about__box">
-                                <h3 class="subtitle about__subtitle">
+                                <span class="subtitle about__subtitle">
                                     ABOUT US
-                                </h3>
+                                </span>
                                 <h2 class="title about__title">
                                     Comfy, Spacious,
                                     and Refreshing
                                 </h2>
-                                <div class="about__text">
-                                    <p>
-                                        Coolab is a coworking space available for various working needs. or virtual
-                                        meeting, collaboration or just working
-                                        together, you can do it all here.
-                                    </p>
-                                </div>
+                                <p class="about__text text">
+                                    Coolab is a coworking space available for various working needs. or virtual
+                                    meeting, collaboration or just working
+                                    together, you can do it all here.
+                                </p>
                             </div>
                             <ul class="about__info">
                                 <li class="about__item">
-                                    <div class="about__number">
+                                    <span class="about__number">
                                         100+
-                                    </div>
-                                    <div class="about__date about__date--small">
+                                    </span>
+                                    <span class="about__date">
                                         Users
                                         per Day
-                                    </div>
+                                    </span>
                                 </li>
                                 <li class="about__item">
-                                    <div class="about__number">
+                                    <span class="about__number">
                                         10+
-                                    </div>
-                                    <div class="about__date">
+                                    </span>
+                                    <span class="about__date">
                                         Events
                                         per Week
-                                    </div>
+                                    </span>
                                 </li>
                                 <li class="about__item">
-                                    <div class="about__number">
+                                    <span class="about__number">
                                         50
-                                    </div>
-                                    <div class="about__date">
+                                    </span>
+                                    <span class="about__date">
                                         Collaboration
                                         Partners
-                                    </div>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -160,82 +156,69 @@
                 <section class="we-offer">
                     <div class="container">
                         <div class="we-offer__inner">
-                            <div class="we-offer__decor">
-                                Coolabs.
-                            </div>
                             <div class="we-offer__box">
-                                <h3 class="subtitle we-offer__subtitle">
+                                <span class="subtitle we-offer__subtitle">
                                     FACILITIES
-                                </h3>
+                                </span>
                                 <h2 class="title we-offer__title">
                                     What We Offer
                                 </h2>
-                                <div class="we-offer__text">
-                                    <p>
-                                        Enjoy our advanced and sophisticated facilities
-                                        during your working hours.
-                                    </p>
-                                </div>
+                                <p class="we-offer__text text">
+                                    Enjoy our advanced and sophisticated facilities
+                                    during your working hours.
+                                </p>
                             </div>
-                            <div class="we-offer__content we-offer-content">
-                                <ul class="we-offer-content__list">
-                                    <li class="we-offer-content__item">
-                                        <img class="we-offer-content__img" src="images/we-offer/1.jpg" alt="interner"
+
+                            <div class="we-offer__content content-info">
+                                <h2 class="sr-only">
+                                    detailed information
+                                </h2>
+                                <ul class="content-info__list">
+                                    <li class="content-info__item">
+                                        <img class="content-info__img" src="images/we-offer/1.jpg" alt="internet"
                                             width="387" height="285">
-                                        <h4 class="we-offer-content__title">
+                                        <h3 class="content-info__title">
                                             High-Speed Internet
-                                        </h4>
-                                        <div class="we-offer-content__text">
-                                            <p>
-                                                Your work will not be hampered because we provide the strongest internet
-                                                network in every corner of the room.
-                                            </p>
-                                        </div>
-
+                                        </h3>
+                                        <p class="content-info__text">
+                                            Your work will not be hampered because we provide the strongest internet
+                                            network in every corner of the room.
+                                        </p>
                                     </li>
-                                    <li class="we-offer-content__item">
-                                        <img class="we-offer-content__img" src="images/we-offer/2.jpg" alt="Coffee"
+                                    <li class="content-info__item">
+                                        <img class="content-info__img" src="images/we-offer/2.jpg" alt="Coffee"
                                             width="387" height="285">
-                                        <h4 class="we-offer-content__title">
+                                        <h3 class="content-info__title">
                                             Free Drink & Coffee Break
-                                        </h4>
-                                        <div class="we-offer-content__text">
-                                            <p>
-                                                Take a rest a little from the fatigue of your work in our game corner,
-                                                various game consoles and machines can be played.
-                                            </p>
-                                        </div>
-
+                                        </h3>
+                                        <p class="content-info__text">
+                                            Take a rest a little from the fatigue of your work in our game corner,
+                                            various game consoles and machines can be played.
+                                        </p>
                                     </li>
-                                    <li class="we-offer-content__item">
-                                        <img class="we-offer-content__img" src="images/we-offer/3.jpg"
-                                            alt="Meeting room" width="387" height="285">
-                                        <h4 class="we-offer-content__title">
-                                            Private Meeting Room
-                                        </h4>
-                                        <div class="we-offer-content__text">
-                                            <p>
-                                                Feel a more private atmosphere for your meeting with the team in this
-                                                special
-                                                private meeting room.
-                                            </p>
-                                        </div>
-
-                                    </li>
-                                    <li class="we-offer-content__item">
-                                        <img class="we-offer-content__img" src="images/we-offer/4.jpg" alt="interner"
+                                    <li class="content-info__item">
+                                        <img class="content-info__img" src="images/we-offer/3.jpg" alt="Meeting room"
                                             width="387" height="285">
-                                        <h4 class="we-offer-content__title">
+                                        <h3 class="content-info__title">
+                                            Private Meeting Room
+                                        </h3>
+                                        <p class="content-info__text">
+                                            Feel a more private atmosphere for your meeting with the team in this
+                                            special
+                                            private meeting room.
+                                        </p>
+                                    </li>
+                                    <li class="content-info__item">
+                                        <img class="content-info__img" src="images/we-offer/4.jpg"
+                                            alt="Dedicated Locker" width="387" height="285">
+                                        <h3 class="content-info__title">
                                             Dedicated Locker
-                                        </h4>
-                                        <div class="we-offer-content__text">
-                                            <p>
-                                                Keep your belonging in the locker so as not to interfere with your work.
-                                                It's safe with
-                                                dedicated key and password.
-                                            </p>
-                                        </div>
-
+                                        </h3>
+                                        <p class="content-info__text">
+                                            Keep your belonging in the locker so as not to interfere with your work.
+                                            It's safe with
+                                            dedicated key and password.
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
@@ -243,116 +226,427 @@
                     </div>
                 </section>
 
+                <section class="coming-events">
+                    <div class="container">
+                        <div class="coming-events__inner">
+                            <div class="coming-events__box">
+                                <span class="subtitle coming-events__subtitle">
+                                    EVENTS
+                                </span>
+                                <h2 class="title coming-events__title">
+                                    Get Involved
+                                </h2>
+                                <p class="coming-events__text text">
+                                    Join our regular and scheduled events. Available for public.
+                                </p>
+                                <a class="coming-events__link" href="#">
+                                    All Events
+                                </a>
+                            </div>
+                            <ul class="coming-events__list">
+                                <li class="coming-events__item">
+                                    <span class="coming-events__month">
+                                        APRIL
+                                    </span>
+                                    <span class="coming-events__date">
+                                        16
+                                    </span>
+                                    <span class="coming-events__name">
+                                        Fun Public Speaking
+                                    </span>
+                                    <span class="content-info__organization">
+                                        with James Morrison
+                                        4 - 5 PM
+                                    </span>
+                                </li>
+                                <li class="coming-events__item">
+                                    <span class="coming-events__month">
+                                        APRIL
+                                    </span>
+                                    <span class="coming-events__date">
+                                        20
+                                    </span>
+                                    <span class="coming-events__name">
+                                        Easter Hunter
+                                    </span>
+                                    <span class="coming-events__organization">
+                                        with Fun Working Club
+                                        12 - 6 PM
+                                    </span>
+                                </li>
+                                <li class="coming-events__item">
+                                    <span class="coming-events__month">
+                                        APRIL
+                                    </span>
+                                    <span class="coming-events__date">
+                                        22
+                                    </span>
+                                    <span class="coming-events__name">
+                                        Coolab Collaboration
+                                    </span>
+                                    <span class="coming-events__organization">
+                                        with Partner Community
+                                        1 - 3 PM
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="price-preview">
+                    <div class="container">
+
+                        <div class="price-preview__inner">
+                            <ul class="price-preview__offer">
+                                <li class="price-preview__item price-preview__item--room"
+                                    style="background-image: url('images/price-preview/private-room.jpg');">
+                                    <span class="price-preview__caption price-preview__caption--transform">
+                                        Private
+                                        Room
+                                    </span> <span class="price-preview__price">
+                                        $ 100 / day
+                                    </span>
+                                </li>
+                                <li class="price-preview__item price-preview__item--desk"
+                                    style="background-image: url('images/price-preview/private-desk.jpg');">
+                                    <span class="price-preview__caption price-preview__caption--transform">
+                                        Private
+                                        Desk
+                                    </span>
+                                    <span class="price-preview__price">
+                                        $ 60/ day
+                                    </span>
+                                </li>
+                                <li class="price-preview__item price-preview__item--shared"
+                                    style="background-image: url('images/price-preview/shared-desk2.jpg');">
+                                    <span class="price-preview__caption">
+                                        Shared
+                                        Desk
+                                    </span>
+                                    <ul class="price-preview__advantage">
+                                        <li>
+                                            Best for Individual
+                                        </li>
+                                        <li>
+                                            High-Speed Internet Access
+                                        </li>
+                                        <li>
+                                            Shared Locker
+                                        </li>
+                                        <li>
+                                            Welcome Drink
+                                        </li>
+                                    </ul>
+                                    <span class="price-preview__price">
+                                        $ 30 / day
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="price-preview__box">
+                                <span class="subtitle price-preview__subtitle">
+                                    PRICING
+                                </span>
+                                <h2 class="title price-preview__title">
+                                    What Do
+                                    You Need?
+                                </h2>
+                                <p class="price-preview__text text">
+                                    Pick a perfect pricing package you
+                                    need for your work.
+                                </p>
+                                <a class="price-preview__link" href="#">
+                                    All Pricing Packages
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="our-photos">
+                    <div class="container">
+                        <div class="our-photos__inner">
+                            <div class="our-photos__box">
+                                <span class="subtitle our-photos__subtitle">
+                                    GALLERY
+                                </span>
+                                <h2 class="title our-photos__title">
+                                    Our
+                                    Photos
+                                </h2>
+                                <p class="our-photos__text text">
+                                    The sneak peek to our cool and cozy place for your work environment.
+                                </p>
+                            </div>
+                            <ul class="our-photos__list">
+                                <li class="our-photos__item">
+                                    <a data-fancybox="gallery" class="our-photos__zoom" href="images/our-photos/1.jpg">
+                                        <img class="our-photos__img" src="images/our-photos/1.jpg"
+                                            alt="empty chairs and table" width="557" height="826">
+                                    </a>
+                                </li>
+                                <li class="our-photos__item">
+                                    <a data-fancybox="gallery" class="our-photos__zoom our-photos__zoom--margin"
+                                        href="images/our-photos/2.jpg">
+                                        <img class="our-photos__img our-photos__img" src="images/our-photos/2.jpg"
+                                            alt="work in the common room" width="560" height="371">
+                                    </a>
+                                    <a data-fancybox="gallery" class="our-photos__zoom" href="images/our-photos/3.jpg">
+                                        <img class="our-photos__img" src="images/our-photos/3.jpg" alt="workspaces"
+                                            width="560" height="435">
+                                    </a>
+                                </li>
+                                <li class="our-photos__item">
+                                    <a data-fancybox="gallery" class="our-photos__zoom" href="images/our-photos/4.jpg">
+                                        <img class="our-photos__img" src="images/our-photos/4.jpg" alt="cabinet"
+                                            width="557" height="826">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                </section>
+
+                <section class="testimonials">
+                    <div class="container">
+                        <div class="testimonials__inner">
+                            <div class="testimonials__box">
+                                <span class="subtitle testimonials__subtitel">
+                                    TESTIMONIALS
+                                </span>
+                                <h2 class="title testimonials__title">
+                                    What They Say
+                                    About Us?
+                                </h2>
+                                <p class="testimonials__text text">
+                                    Our services and facilities, reviewed directly by our lovely customers.
+                                </p>
+                            </div>
+                            <div class="testimonials__swiper swiper">
+                                <ul class="testimonials__list swiper-wrapper">
+                                    <li class="testimonials__item swiper-slide">
+                                        <div class="testimonials__author">
+                                            <img class="testimonials__img" src="images/testimonials/avatar/1.jpg"
+                                                alt="avatar" width="102" height="102">
+                                            <div class="testimonials__date">
+                                                <span class="testimonials__name">
+                                                    Wilhelm
+                                                </span>
+                                                <span class="testimonials__status">
+                                                    Project Manager
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="testimonials__review">
+                                            What a cozy place to work and take a breather from the stuffy
+                                            atmosphere. It's worth trying, considering the facilities are the
+                                            best,
+                                            too.
+                                        </p>
+                                    </li>
+                                    <li class="testimonials__item swiper-slide">
+                                        <div class="testimonials__author">
+                                            <img class="testimonials__img" src="images/testimonials/avatar/2.jpg"
+                                                alt="avatar" width="102" height="102">
+                                            <div class="testimonials__date">
+                                                <span class="testimonials__name">
+                                                    Joan
+                                                </span>
+                                                <span class="testimonials__status">
+                                                    Freelance Writer
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="testimonials__review">
+                                            Working as a freelancer gives me the freedom to choose the place to
+                                            work. Using Coolab is the best experience and it becomes my favorite
+                                            working place.
+                                        </p>
+                                    </li>
+                                    <li class="testimonials__item swiper-slide">
+                                        <div class="testimonials__author">
+                                            <img class="testimonials__img" src="images/testimonials/avatar/1.jpg"
+                                                alt="avatar" width="102" height="102">
+                                            <div class="testimonials__date">
+                                                <span class="testimonials__name">
+                                                    Wilhelm
+                                                </span>
+                                                <span class="testimonials__status">
+                                                    Project Manager
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="testimonials__review">
+                                            What a cozy place to work and take a breather from the stuffy
+                                            atmosphere. It's worth trying, considering the facilities are the
+                                            best,
+                                            too.
+                                        </p>
+                                    </li>
+                                    <li class="testimonials__item swiper-slide">
+                                        <div class="testimonials__author">
+                                            <img class="testimonials__img" src="images/testimonials/avatar/2.jpg"
+                                                alt="avatar" width="102" height="102">
+                                            <div class="testimonials__date">
+                                                <span class="testimonials__name">
+                                                    Joan
+                                                </span>
+                                                <span class="testimonials__status">
+                                                    Freelance Writer
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="testimonials__review">
+                                            Working as a freelancer gives me the freedom to choose the place to
+                                            work. Using Coolab is the best experience and it becomes my favorite
+                                            working place.
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="testimonials__pagination swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="get-space">
+                    <div class="container">
+                        <div class="get-space__box"
+                            style="background-image: url('images/get-space/get-space-bg1.jpg');">
+                            <span class="get-space__subtitle subtitle">
+                                COOLABS
+                            </span>
+                            <h2 class="get-space__title title">
+                                Get Your Working Space Now!
+                            </h2>
+                            <p class="get-space__text text">
+                                Find the space you need to do <br>
+                                your productive work every day comfortably.
+                            </p>
+                            <a class="get-space__link button" href="#">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </main>
 
         </div>
 
         <footer class="footer">
             <div class="container">
+                <h2 class="sr-only">
+                    our address, social networks and subscription
+                </h2>
                 <div class="footer__inner">
                     <div class="footer__contact">
                         <a class="footer__logo" href="#">
                             <img class="footer__logo-img" src="images/footer/logo.svg" alt="footer logo" width="323"
                                 height="82">
                         </a>
-                        <address class="footer__address address-footer">
-                            <p>
-                                2755 Commercial St SE Salem, Corner with
-                                Sunny Boulevard, 3755 Commercial OR 97302
-                            </p>
-                            <ul class="address-footer__list">
-                                <li class="address-footer__item">
-                                    <a class="address-footer__link address-footer__link--call" href="tel:+1234567890">
+                        <address class="footer__address address-date">
+                            <div class="address-date__text">
+                                <p>
+                                    2755 Commercial St SE Salem, Corner with
+                                    Sunny Boulevard, 3755 Commercial OR 97302
+                                </p>
+                            </div>
+                            <ul class="address-date__list">
+                                <li class="address-date__item">
+                                    <a class="address-date__link" href="tel:+1234567890">
+                                        <svg>
+                                            <use xlink:href="images/sprite.svg#call-us"></use>
+                                        </svg>
                                         +123 456 7890
                                     </a>
                                 </li>
-                                <li class="address-footer__item">
-                                    <a class="address-footer__link address-footer__link--email"
-                                        href="mailto:hello@coolabs.com">
+                                <li class="address-date__item">
+                                    <a class="address-date__link" href="mailto:hello@coolabs.com">
+                                        <svg>
+                                            <use xlink:href="images/sprite.svg#letter"></use>
+                                        </svg>
                                         hello@coolabs.com
                                     </a>
                                 </li>
                             </ul>
                         </address>
                     </div>
-                    <div class="footer__info footer-info">
-                        <div class="footer-info__inforamtion">
-                            <div class="footer-info__title">
+                    <ul class="footer__info info-nav">
+                        <li class="info-nav__items">
+                            <h3 class="info-nav__title">
                                 Information
-                            </div>
-                            <ul class="footer-info__list">
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                            </h3>
+                            <ul class="info-nav__list">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         FAQ
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         Terms & Conditions
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         Pricing
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         User Account
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         Legal Regulations
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="footer-info__social">
-                            <div class="footer-info__title">
+                        </li>
+                        <li class="info-nav__items">
+                            <h3 class="info-nav__title">
                                 Social Media
-                            </div>
-                            <ul class="footer-info__list">
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                            </h3>
+                            <ul class="info-nav__list">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         Facebook
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         Instagram
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         LinkedIn
                                     </a>
                                 </li>
-                                <li class="footer-info__item">
-                                    <a class="footer-info__link" href="#">
+                                <li class="info-nav__item">
+                                    <a class="info-nav__link" href="#">
                                         Twitter
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="footer__subscribe footer-subscribe">
-                        <h2 class="footer-subscribe__titel title">
+                        </li>
+                    </ul>
+                    <div class="footer__subscribe">
+                        <h3 class="footer__subscribe-title title">
                             Newsletter
-                        </h2>
-                        <div class="footer-subscribe__text">
-                            <p>
-                                Subscribe to our newsletter to get the update news related to our latest properties and
-                                time-limited discounts.
-                            </p>
-                        </div>
-                        <form class="footer-subscribe__form" action="#">
+                        </h3>
+                        <p class="footer__text">
+                            Subscribe to our newsletter to get the update news related to our latest properties and
+                            time-limited discounts.
+                        </p>
+                        <form class="subscribe-form" action="#">
                             <label class="sr-only" for="footer-subscribe">
                                 enter your email for subscribe
                             </label>
-                            <input class="footer-subscribe__input" id="footer-subscribe" name="email-footer"
-                                type="email" placeholder="Enter your e-mail address" required>
-                            <button class="footer-subscribe__button button" type="submit">
+                            <input class="subscribe-form__input" id="footer-subscribe" name="email-footer" type="email"
+                                placeholder="Enter your e-mail address" required>
+                            <button class="subscribe-form__button button" type="submit">
                                 Subscribe
                             </button>
                         </form>
@@ -363,6 +657,8 @@
 
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
