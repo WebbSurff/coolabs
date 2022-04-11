@@ -24,18 +24,13 @@
         min-height: calc(100vh - 124px);
         display: flex;
         flex-direction: column;
+    }
 
+    &__ornament {
         &::after {
-            content: "\a.....\a.....\a.....\a.....";
+            bottom: 0;
+            left: 0;
             display: block;
-            white-space: normal;
-            color: $main-color;
-            font-size: 33px;
-            letter-spacing: 19px;
-            line-height: 0.96;
-            max-width: 100px;
-            font-weight: 900;
-            font-family: system-ui;
         }
     }
 
@@ -54,7 +49,7 @@
     }
 
     &__info {
-        padding: 24px 21px;
+        padding: 24px 65px 21px 24px;
         border: 3px solid #205b6c;
         display: flex;
         position: relative;
@@ -63,7 +58,7 @@
     }
 
     &__box {
-        flex: 0 1 44%;
+        flex: 0 1 45%;
         margin-right: 15px;
     }
 
@@ -78,21 +73,21 @@
         @include line-clamp(2);
     }
 
-    &__arrow {
+    &__link {
         position: absolute;
-        width: 165px;
+        width: 16.3%;
         right: -3px;
         top: -1px;
         bottom: -1px;
         background-color: $main-color;
-        fill: #fff;
-        background-image: url('../images/hero/arrow-hero.svg');
-        background-repeat: no-repeat;
-        background-size: 70%;
-        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        svg {
-            width: 120px;
+        &::after {
+            filter: invert(100%) sepia(23%) saturate(0%) hue-rotate(37deg) brightness(105%) contrast(102%);
+            width: 100px;
         }
+
     }
 }

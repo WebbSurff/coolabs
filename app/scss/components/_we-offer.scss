@@ -1,13 +1,12 @@
 .we-offer {
     padding-top: 72px;
-    margin-bottom: 72px;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
         width: 20px;
-        height: 292px;
+        height: 28%;
         background-color: $main-color;
         left: 0;
         top: 0;
@@ -16,25 +15,29 @@
     &::after {
         content: '';
         position: absolute;
-        width: 610px;
+        width: 23%;
         height: 110px;
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url('../images/we-offer/decor.svg');
         background-position: center;
-        left: 50%;
+        left: 25%;
         top: 10%;
-        transform: translateX(-100%);
     }
 
     &__inner {
         display: flex;
-        position: relative;
         justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-bottom: 72px;
+    }
+
+    &__ornament {
 
         &::before,
         &::after {
-            @extend.ornament;
+            display: block;
         }
 
         &::before {
@@ -46,13 +49,14 @@
         &::after {
             left: 0;
             bottom: 18%;
-            color: $main-color;
         }
     }
 
     &__box {
-        margin-top: 15%;
         max-width: 35%;
+        margin-right: 20px;
+        background-color: #fff;
+        z-index: 10;
     }
 
     &__title {
@@ -60,7 +64,11 @@
     }
 
     &__text {
-        @include line-clamp (5);
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
     }
 }
 
@@ -87,6 +95,6 @@
     }
 
     &__text {
-        @include line-clamp (3);
+        @include line-clamp (4);
     }
 }

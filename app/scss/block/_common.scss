@@ -7,7 +7,38 @@
     line-height: 1.4;
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgb(231 231 231 / 90%);
         color: $main-color;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.arrow {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: $poppins;
+    color: $brown-900;
+
+
+    &::after {
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 110px;
+        height: 20px;
+        display: inline-flex;
+        background-position: center;
+        background-image: url('../images/sprite.svg#arrow-right-black');
+        transition: transform 0.3s;
+    }
+
+    &:hover {
+        &::after {
+            transform: translateX(10px);
+        }
     }
 }

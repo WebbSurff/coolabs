@@ -60,6 +60,7 @@
 
     &__review {
         max-width: 459px;
+        @include line-clamp(6);
     }
 
     &__pagination {

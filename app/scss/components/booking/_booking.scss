@@ -1,0 +1,206 @@
+.booking {
+    margin-top: 4%;
+    padding-top: 1%;
+    margin-bottom: 10%;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        background-color: $brown-900;
+        right: 25%;
+        top: 10%;
+    }
+
+    &::before {
+        @extend .ornament;
+        color: $main-color;
+        right: 30%;
+        top: 0;
+    }
+
+    &__bg {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/booking/bg-booking.jpg);
+        border-radius: 300px 0px 0px 0px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 49%;
+        left: 72%;
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        font-size: 72px;
+        margin-bottom: 64px;
+        max-width: 725px;
+    }
+}
+
+
+.form-space {
+    &__inner {
+        width: 70%;
+    }
+
+    &__content {
+        display: flex;
+        margin-bottom: 64px;
+        justify-content: space-between;
+    }
+
+    &__label {
+        display: block;
+        text-align: left;
+        color: $main-color;
+        margin-bottom: 12px;
+        font-family: $poppins;
+        font-size: 24px;
+        line-height: 1.4;
+        font-weight: 500;
+        flex: 0 1 560px;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+
+        &--big {
+            flex: 0 1 778px;
+        }
+
+        &--date {
+            flex: 0 1 328px;
+        }
+    }
+
+    &__input {
+        padding: 12px 12px 12px 0;
+        border-bottom: 1px solid $main-color;
+        width: 100%;
+        font-weight: 400;
+
+        &::placeholder {
+            font-size: 24px;
+            line-height: 1.4;
+            color: $pistachio;
+        }
+
+        &--date {
+            font-size: 24px;
+            line-height: 1.4;
+            color: $pistachio;
+            background-image: url('../images/booking/calendar.svg');
+            background-repeat: no-repeat;
+            background-size: 28px 28px;
+            background-position: right center;
+        }
+    }
+
+    &__choise {
+        text-align: end;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 64px;
+    }
+
+    &__item {
+        padding: 48px;
+        text-align: center;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+    }
+
+    &__img {
+        margin-bottom: 28px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        font-family: $poppins;
+        transition: color 0.3s;
+    }
+
+    &__radio {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &+.form-space__title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            border: 3px solid #ccc;
+            cursor: pointer;
+            outline: transparent;
+            transition: border-color 0.3s, outline 0.3s;
+        }
+
+        &:checked+.form-space__title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border: 4px solid $main-color;
+        }
+
+        &:checked+.form-space__title {
+            color: $main-color;
+        }
+
+        &:hover {
+            &+.form-space__title::before {
+                border-color: $main-color;
+            }
+
+            &+.form-space__title {
+                color: $main-color;
+            }
+        }
+
+        &:focus {
+            &+.form-space__title::before {
+                outline: 2px solid #f3b611b3;
+                outline-offset: 5px;
+            }
+
+        }
+
+    }
+}
+
+.air-datepicker {
+    border: none;
+
+    &-nav {
+        justify-content: center;
+
+        &--action {
+            display: none;
+        }
+    }
+}
