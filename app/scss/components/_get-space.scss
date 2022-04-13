@@ -7,26 +7,29 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        position: relative;
+    }
+
+    &__ornament {
         overflow: hidden;
 
         &::before,
         &::after {
-            @extend .ornament;
-            font-size: 90px;
-            letter-spacing: 40px;
+            font-size: 150px;
+            letter-spacing: 27px;
             color: #fff;
+            display: block;
         }
 
         &::before {
             left: 2%;
-            bottom: -30%;
+            bottom: 11%;
+            line-height: 72px;
         }
 
         &::after {
-            transform: rotate(180deg);
-            top: 5%;
-            right: -12%;
+            top: -2%;
+            right: -2%;
+            line-height: 77px;
         }
     }
 

@@ -1,12 +1,11 @@
 .our-photos {
     margin-bottom: 100px;
 
-    &__inner {
-        position: relative;
+    &__ornament {
 
         &::after,
         &::before {
-            @extend .ornament;
+            display: block;
         }
 
         &::after {
