@@ -30,6 +30,22 @@ body {
     padding: 0 15px;
 }
 
+.section {
+    margin-bottom: 100px;
+
+    @include m($xl) {
+        margin-bottom: 80px;
+    }
+
+    @include m($lg) {
+        margin-bottom: 50px;
+    }
+
+    @include m($sm) {
+        margin-bottom: 30px;
+    }
+}
+
 button,
 a,
 input {
@@ -90,6 +106,16 @@ a {
     font-family: $poppins;
     line-height: 1.2;
     font-size: 48px;
+    margin-bottom: 36px;
+
+    @include m($lg) {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    @include m($md) {
+        font-size: 32px;
+    }
 }
 
 .subtitle {
@@ -101,11 +127,24 @@ a {
     text-transform: uppercase;
     margin-bottom: 36px;
     display: block;
+
+    @include m($lg) {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
 }
 
 .text-description {
     font-size: 24px;
     line-height: 1.4;
+
+    @include m($md) {
+        font-size: 20px;
+    }
+
+    @include m($sm) {
+        font-size: 18px;
+    }
 }
 
 .ornament {
@@ -122,5 +161,10 @@ a {
         max-width: 135px;
         height: 135px;
         color: $main-color;
+
+        @include m($xl) {
+            opacity: 0.2;
+        }
     }
+
 }

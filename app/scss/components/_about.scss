@@ -3,10 +3,24 @@
     background-size: 50% 100%;
     background-position: left;
 
+    @include m ($xxl) {
+        background-size: 40% 87%;
+    }
+
+    @include m($xl) {
+        background-size: 0;
+    }
+
     &__content {
         margin-left: auto;
         padding: 35px 0;
         max-width: 736px;
+
+        @include m($xl) {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     &__box {
@@ -22,12 +36,24 @@
             background-color: $main-color;
             left: 0;
             bottom: 0;
+
+            @include m($sm) {
+                display: none;
+            }
+        }
+
+        @include m($md) {
+            padding-left: 35px;
+            margin-bottom: 40px;
+        }
+
+        @include m($sm) {
+            padding-left: 0;
         }
     }
 
     &__title {
         max-width: 425px;
-        margin-bottom: 36px;
     }
 
     &__text {
@@ -37,6 +63,14 @@
     &__info {
         display: flex;
         justify-content: center;
+
+        @include m($sm) {
+            flex-direction: column;
+        }
+
+        @include hl {
+            flex-direction: row;
+        }
     }
 
     &__item {
@@ -56,11 +90,27 @@
                 top: 50%;
                 background-color: $main-color;
                 border-radius: 50%;
+
+                @include m($sm) {
+                    display: none;
+                }
+
+                @include hl {
+                    display: block;
+                }
             }
         }
 
         &:nth-child(2) {
             margin: 0 auto;
+
+            @include m($sm) {
+                margin: 20px 0;
+            }
+
+            @include hl {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -71,10 +121,18 @@
         line-height: 1.2;
         font-weight: 600;
         margin-bottom: 12px;
+
+        @include m($md) {
+            font-size: 40px;
+        }
     }
 
     &__date {
         font-size: 25px;
         line-height: 1.4;
+
+        @include m($md) {
+            font-size: 22px;
+        }
     }
 }

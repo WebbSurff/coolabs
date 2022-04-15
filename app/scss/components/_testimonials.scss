@@ -1,17 +1,21 @@
 .testimonials {
-    margin-bottom: 61px;
 
     &__inner {
         display: flex;
+
+        @include m($xl) {
+            display: block;
+        }
     }
 
     &__box {
         flex: 1 0 25%;
         margin-right: 4%;
-    }
 
-    &__title {
-        margin-bottom: 36px;
+        @include m($xl) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 
     &__text {
@@ -31,18 +35,35 @@
         border: 3px solid $main-color;
         height: auto;
         width: auto;
+
+        @include m($xl) {
+            padding: 30px 26px;
+        }
+
+        @include m($sm) {
+            padding: 15px 10px;
+        }
     }
 
     &__author {
         display: flex;
         margin-bottom: 24px;
         align-items: center;
+
+        @include m($sm) {
+            margin-bottom: 10px;
+        }
     }
 
     &__img {
         border-radius: 50%;
         margin-right: 24px;
         object-fit: cover;
+
+        @include m($sm) {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__name {
@@ -52,15 +73,33 @@
         line-height: 1.4;
         font-family: $poppins;
         display: block;
+
+        @include m($sm) {
+            font-size: 21px;
+        }
     }
 
     &__status {
         color: $main-color;
+
+        @include m($sm) {
+            font-size: 16px;
+        }
+
     }
 
     &__review {
         max-width: 459px;
         @include line-clamp(6);
+
+        @include m($sm) {
+            font-size: 16px;
+            max-width: 320px;
+        }
+
+        @include m($xs) {
+            max-width: 250px;
+        }
     }
 
     &__pagination {

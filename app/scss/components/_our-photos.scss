@@ -1,5 +1,4 @@
 .our-photos {
-    margin-bottom: 100px;
 
     &__ornament {
 
@@ -22,37 +21,79 @@
     }
 
     &__box {
-        max-width: 496px;
         margin: 0 auto;
         text-align: center;
         margin-bottom: 72px;
+        max-width: 496px;
+
+        @include m($lg) {
+            margin-bottom: 50px;
+        }
+
+        @include m($sm) {
+            margin-bottom: 25px;
+        }
+
     }
 
     &__title {
         max-width: 167px;
         margin: 0 auto 41px;
+
+        @include m($lg) {
+            max-width: 100%;
+            margin: 20px;
+        }
     }
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, minmax(300px, 560px));
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 371px 1fr;
         grid-gap: 19px;
+        position: relative;
+        z-index: 10;
+
+        @include m($xl) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        @include m($sm) {
+            grid-gap: 5px;
+        }
     }
 
-    &__zoom {
+    &__item {
+
+        &:nth-child(3) {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-column-end: 2;
+        }
+    }
+
+    &__link {
         display: block;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+        height: 100%;
 
         &:hover {
             opacity: 0.7;
         }
 
-        &--margin {
-            margin-bottom: 20px;
+        &:active {
+            transform: scale(0.9);
         }
     }
 
     &__img {
         object-fit: cover;
+
+        @include m($xl) {
+            width: 100%;
+            height: 100%;
+        }
     }
 }

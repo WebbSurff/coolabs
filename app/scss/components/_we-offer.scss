@@ -2,6 +2,10 @@
     padding-top: 72px;
     position: relative;
 
+    @include m($md) {
+        padding-top: 40px;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -10,6 +14,10 @@
         background-color: $main-color;
         left: 0;
         top: 0;
+
+        @include m($xl) {
+            display: none;
+        }
     }
 
     &::after {
@@ -23,6 +31,15 @@
         background-position: center;
         left: 25%;
         top: 10%;
+
+        @include m($xl) {
+            right: 20%;
+            left: auto;
+        }
+
+        @include m($lg) {
+            display: none;
+        }
     }
 
     &__inner {
@@ -31,6 +48,15 @@
         align-items: center;
         position: relative;
         padding-bottom: 72px;
+
+        @include m($xl) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include m($md) {
+            padding-bottom: 30px;
+        }
     }
 
     &__ornament {
@@ -38,6 +64,10 @@
         &::before,
         &::after {
             display: block;
+
+            @include m($xl) {
+                display: none;
+            }
         }
 
         &::before {
@@ -55,13 +85,18 @@
     &__box {
         max-width: 35%;
         margin-right: 20px;
-        background-color: #fff;
-        z-index: 10;
+        z-index: 9;
+
+        @include m($xl) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        @include m($lg) {
+            max-width: 100%;
+        }
     }
 
-    &__title {
-        margin-bottom: 36px;
-    }
 
     &__text {
         p {
@@ -76,13 +111,30 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(2, 387px);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 48px 173px;
+
+        @include m($xxl) {
+            grid-gap: 40px 50px;
+        }
+
+        @include m($md) {
+            grid-gap: 30px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @include hl {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__img {
         object-fit: cover;
         margin-bottom: 24px;
+
+        @include m($md) {
+            width: 100%;
+        }
     }
 
     &__title {

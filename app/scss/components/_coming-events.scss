@@ -1,5 +1,4 @@
 .coming-events {
-    margin-bottom: 100px;
     position: relative;
 
     &::before {
@@ -11,13 +10,19 @@
         left: 0;
         bottom: 33%;
         z-index: -1;
+
+        @include m($xl) {
+            display: none;
+        }
     }
 
     &__inner {
         display: flex;
-        position: relative;
-        justify-content: space-between;
         padding-top: 6%;
+
+        @include m($xl) {
+            flex-direction: column;
+        }
     }
 
     &__ornamernt {
@@ -25,61 +30,120 @@
             display: block;
             right: 0;
             top: -4%;
+
+            @include m($md) {
+                display: none;
+            }
         }
     }
 
     &__box {
-        max-width: 30%;
         display: flex;
         flex-direction: column;
-        color: $beige-100;
         margin-right: 20px;
+        max-width: 30%;
+
+        @include m($xl) {
+            margin-right: 0;
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
     }
 
     &__subtitle {
-        color: #fff;
+        color: $brown-900;
     }
 
     &__title {
         color: $brown-700;
-        color: #fff;
-        margin-bottom: 36px;
     }
 
     &__text {
         margin-bottom: auto;
-    }
+        color: $beige-100;
 
-    &__link {
-        border-radius: 15px;
-        display: inline-flex;
-        align-self: flex-start;
-        align-items: center;
-
-        &::after {
-            margin-left: 30px;
+        @include m($xl) {
+            margin-bottom: 30px;
         }
     }
 
+    &__arrow {
+        border-radius: 15px;
+        align-self: flex-start;
+
+        &::after {
+            margin-left: 30px;
+
+            @include m($md) {
+                width: 80px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+
     &__list {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(300px, 415px));
+        display: flex;
+        flex: 1;
         margin-top: 5%;
-        grid-gap: 20px;
+
+        @include m($xl) {
+            flex: none;
+            margin: 0;
+            justify-content: space-around;
+        }
+
+        @include m($md) {
+            flex-direction: column;
+        }
     }
 
     &__item {
         padding: 50px 15px;
+        flex: 1 1 385px;
         text-align: center;
         border: 3px solid $main-color;
         font-family: $poppins;
         background-color: #fff;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include m($md) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        @include m($xxl) {
+            padding: 30px 10px;
+        }
+
+        @include m($xl) {
+            flex: 0 1 300px;
+        }
+
+        @include m($md) {
+            flex: 0 1 250px;
+        }
+
+        @include hl {
+            flex: 0 1 250px;
+        }
+
+        @include m($sm) {
+            flex: 0 1 auto;
+        }
     }
 
     &__date {
         margin-bottom: 33px;
         color: $brown-900;
         display: block;
+
+        @include m($xxl) {
+            margin-bottom: 20px;
+        }
     }
 
     &__month {
@@ -89,6 +153,16 @@
         color: $main-color;
         letter-spacing: 0.35em;
         margin-bottom: 43px;
+        text-transform: uppercase;
+
+        @include m($xxl) {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        @include m($xl) {
+            font-size: 18px;
+        }
     }
 
 
@@ -96,6 +170,14 @@
         font-weight: 600;
         font-size: 144px;
         line-height: 1;
+
+        @include m($xxl) {
+            font-size: 90px;
+        }
+
+        @include m($xl) {
+            font-size: 60px;
+        }
     }
 
     &__name {
@@ -104,11 +186,23 @@
         line-height: 1.4;
         margin-bottom: 12px;
         @include line-clamp (2);
+
+        @include m($xxl) {
+            font-size: 22px;
+        }
+
+        @include m($xl) {
+            font-size: 18px;
+        }
     }
 
     &__organization {
         max-width: 186px;
         margin: 0 auto;
         @include line-clamp (3);
+
+        @include m($md) {
+            max-width: 100%;
+        }
     }
 }

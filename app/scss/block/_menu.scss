@@ -1,13 +1,15 @@
 .menu {
-
-    &__list {
-        display: flex;
-        margin: 0 auto;
-    }
+    display: flex;
+    margin: 0 auto;
 
     &__item {
         &:not(:last-child) {
             margin-right: 48px;
+
+            @include m($xl) {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
         }
     }
 

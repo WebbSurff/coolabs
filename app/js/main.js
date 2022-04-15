@@ -6,17 +6,45 @@ $(function () {
         pagination: {
             el: ".testimonials__pagination",
             clickable: true,
-        },
+        }
     });
 
     $('.price-preview__item').on('click', function () {
-        $(this).toggleClass('price-preview__item--active')
-        $('.price-preview__item').on('click', function () {
-            $('.price-preview__item').not(this).removeClass('price-preview__item--active')
-        })
+        $(this).toggleClass('active')
     });
     $('.price-preview__item').on('click', function () {
+        $('.price-preview__item--shared').toggleClass('remove')
+    });
+    $('.price-preview__item, .header__burger').on('click', function () {
         $('body').toggleClass('lock');
+    });
+
+    $('.header__burger').on('click', function () {
+        $('.header-mobile, .header__burger-line').toggleClass('active')
+    });
+
+    const price_room = document.querySelector('.price-preview__item--room');
+    const price_desk = document.querySelector('.price-preview__item--desk');
+    const price_share = document.querySelector('.price-preview__item--shared');
+    const burger = document.querySelector('.header__burger-line');
+    const mobile = document.querySelector('.header-mobile');
+    const bodyLock = document.querySelector('body');
+
+    document.addEventListener('click', function (e) {
+        if (e.target !== price_room && e.target !== price_desk && e.target == bodyLock) {
+            price_room.classList.remove('active');
+            price_desk.classList.remove('active');
+            price_share.classList.remove('remove');
+            bodyLock.classList.remove('lock');
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (e.target !== burger && e.target !== mobile && e.target == bodyLock) {
+            burger.classList.remove('active');
+            mobile.classList.remove('active');
+            bodyLock.classList.remove('lock');
+        }
     });
 
 

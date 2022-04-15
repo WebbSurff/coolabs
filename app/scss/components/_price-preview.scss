@@ -1,5 +1,4 @@
 .price-preview {
-    margin-bottom: 100px;
     position: relative;
 
     &__ornament {
@@ -17,6 +16,11 @@
         max-width: 1735px;
         padding-right: 15px;
 
+        @include m($lg) {
+            flex-direction: column;
+            padding: 0 15px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -25,33 +29,128 @@
             background-color: $main-color;
             left: 88%;
             bottom: 85%;
+
+            @include m($sm) {
+                display: none;
+            }
         }
 
     }
 
     &__offer {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(190px, 225px) minmax(210px, 270px) minmax(500px, 725px));
-        grid-gap: 20px;
-        grid-template-rows: 720px;
+        display: flex;
+        min-height: 70vh;
         color: #fff;
         margin-right: 20px;
+        flex: 1 0 auto;
+
+        @include m($lg) {
+            min-height: auto;
+            flex-direction: column;
+            margin-right: 0;
+        }
     }
 
     &__item {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        display: flex;
-        cursor: pointer;
-        flex-direction: column;
-        width: 100%;
         z-index: 5;
-        transition: border-radius 0.3s, width 0.3s, z-index 0.5s, opacity 0.3s, transform 0.3s;
+        transition: border-radius 0.3s, width 0.3s, flex 0.3s, z-index 0.5s, opacity 0.3s, transform 0.3s;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include m($lg) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        &--room {
+            flex: 1 1 5%;
+        }
+
+        &--desk {
+            flex: 1 1 9%;
+        }
+
+        &--shared {
+            padding: 96px 0 0 64px;
+            border-radius: 0px 40% 0px 0px;
+            pointer-events: none;
+            flex: 1 1 45%;
+
+            .price-preview__item.active {
+                padding: 0;
+            }
+
+            &::after {
+                border-radius: 0px 40% 0px 0px;
+
+                @include m($lg) {
+                    border-radius: 0;
+                }
+            }
+
+            @include m($xxl) {
+                padding: 35px 0 0 30px;
+                flex: 1 1 27%;
+            }
+
+            @include m($lg) {
+                border-radius: 0;
+            }
+        }
+
+        &--shared.remove {
+            border-radius: 0;
+            flex: 1 1 9%;
+            padding: 0;
+
+            .price-preview__caption {
+                transform: rotate(-90deg);
+                margin: auto auto 0;
+
+                @include m($lg) {
+                    transform: rotate(0);
+                }
+            }
+        }
 
         &--room,
-        &--desk {
+        &--desk,
+        &--shared.remove {
             padding-bottom: 83px;
+
+            @include m($xxl) {
+                flex: 1 1 0;
+            }
+
+            @include m($lg) {
+                padding: 35px 0 0 30px;
+                min-height: 200px;
+            }
+
+            @include m($sm) {
+                min-height: 150px;
+            }
 
             .price-preview__price {
                 opacity: 0;
@@ -68,14 +167,36 @@
 
         }
 
-        &--active {
-            width: 700px;
-            border-radius: 0px 300px 0px 0px;
-            z-index: 10;
-            transition: border-radius 0.3s, width 0.3s, transform 0.3s;
-            padding: 96px 0 0 64px;
+
+        &.active {
+            flex: 1 0 40%;
             position: relative;
+            z-index: 10;
+            border-radius: 0px 45% 0px 0px;
+            padding: 96px 0 0 64px;
             transform: scale(1.1);
+            transition: border-radius 0.3s, width 0.3s, transform 0.3s, flex 0.3s;
+
+            &::after {
+                border-radius: 0px 45% 0px 0px;
+
+                @include m($lg) {
+                    border-radius: 0;
+                }
+            }
+
+            @include m($xxl) {
+                padding: 35px 0 0 30px;
+                flex: 1 1 27%;
+            }
+
+            @include m($lg) {
+                padding: 35px 0 0 30px;
+                flex: auto;
+                border-radius: 0;
+                text-align: center;
+                min-height: 240px;
+            }
 
             .price-preview__price {
                 opacity: 1;
@@ -96,14 +217,10 @@
 
         }
 
-        &--shared {
-            padding: 96px 0 0 64px;
-            border-radius: 0px 300px 0px 0px;
-            pointer-events: none;
-        }
-
-        &:hover {
-            transform: scale(1.1);
+        @media(any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -119,7 +236,25 @@
 
         &--transform {
             transform: rotate(-90deg);
-            margin-top: auto;
+            margin: auto auto 0;
+
+            @include m($lg) {
+                transform: rotate(0);
+                margin: 0;
+            }
+        }
+
+        @include m($xxl) {
+            font-size: 35px;
+        }
+
+        @include m($lg) {
+            font-size: 35px;
+            max-width: 100%;
+        }
+
+        @include m($sm) {
+            font-size: 25px;
         }
     }
 
@@ -134,35 +269,56 @@
         font-weight: 500;
         font-size: 24px;
         font-family: $poppins;
+
+        @include m($xxl) {
+            font-size: 19px;
+            padding: 20px 22px 20px;
+        }
+
+        @include m($sm) {
+            font-size: 15px;
+            padding: 11px 10px 10px;
+        }
     }
 
     &__box {
         max-width: 426px;
-        margin-left: auto;
         display: flex;
         flex-direction: column;
+
+        @include m($lg) {
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
     }
 
     &__subtitle {
         margin-top: auto;
     }
 
-    &__title {
-        margin-bottom: 36px;
-    }
-
     &__text {
         margin-bottom: auto;
+
+        @include m($lg) {
+            margin-bottom: 20px;
+        }
     }
 
-    &__link {
+    &__arrow {
         border-radius: 15px;
-        display: inline-flex;
-        align-items: center;
         align-self: flex-start;
+
+        @include m($xl) {
+            font-size: 20px;
+        }
 
         &::after {
             margin-left: 24px;
+
+            @include m($xxl) {
+                margin-left: 15px;
+                width: 90px;
+            }
         }
     }
 }
