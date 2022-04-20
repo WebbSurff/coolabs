@@ -1,4 +1,8 @@
 $(function () {
+    const da = new DynamicAdapt("max");
+    da.init();
+
+
     var testimonials = new Swiper('.testimonials__swiper', {
         slidesPerView: "auto",
         freeMode: true,
@@ -7,6 +11,10 @@ $(function () {
             el: ".testimonials__pagination",
             clickable: true,
         }
+    });
+
+    $(".price-preview__link").on('click', function (event) {
+        event.preventDefault();
     });
 
     $('.price-preview__item').on('click', function () {
@@ -20,14 +28,14 @@ $(function () {
     });
 
     $('.header__burger').on('click', function () {
-        $('.header-mobile, .header__burger-line').toggleClass('active')
+        $('.menu, .header__burger-line').toggleClass('active')
     });
+
 
     const price_room = document.querySelector('.price-preview__item--room');
     const price_desk = document.querySelector('.price-preview__item--desk');
     const price_share = document.querySelector('.price-preview__item--shared');
-    const burger = document.querySelector('.header__burger-line');
-    const mobile = document.querySelector('.header-mobile');
+
     const bodyLock = document.querySelector('body');
 
     document.addEventListener('click', function (e) {
@@ -38,6 +46,9 @@ $(function () {
             bodyLock.classList.remove('lock');
         }
     });
+
+    const burger = document.querySelector('.header__burger-line');
+    const mobile = document.querySelector('.menu');
 
     document.addEventListener('click', function (e) {
         if (e.target !== burger && e.target !== mobile && e.target == bodyLock) {
@@ -74,9 +85,9 @@ $(function () {
     }
 
     let date = new Date();
-    var day = twoDigits(date.getDate())
-    var month = twoDigits(date.getMonth() + 1)
-    var year = twoDigits(date.getFullYear())
+    var day = twoDigits(date.getDate());
+    var month = twoDigits(date.getMonth() + 1);
+    var year = twoDigits(date.getFullYear());
     var name_input = document.getElementById('input-date');
     name_input.value = day + "/" + month + "/" + year;
 

@@ -30,24 +30,6 @@ body {
     padding: 0 15px;
 }
 
-.section {
-    margin-bottom: 100px;
-
-    @include m($xl) {
-        margin-bottom: 80px;
-    }
-
-    @include m($lg) {
-        margin-bottom: 50px;
-    }
-
-    @include m($sm) {
-        margin-bottom: 30px;
-    }
-}
-
-button,
-a,
 input {
     transition: outline 0.3s, color 0.3s, background-color 0.3s, opacity 0.3s;
 
@@ -67,7 +49,15 @@ input {
     }
 }
 
+button,
 a {
+    transition: outline 0.3s, color 0.3s, background-color 0.3s, opacity 0.3s;
+
+    &:focus {
+        outline: 2px solid #f3b611b3;
+        outline-offset: 5px;
+    }
+
     &:hover {
         color: $main-color;
     }
@@ -100,53 +90,6 @@ a {
     overflow: hidden;
 }
 
-.title {
-    font-weight: 600;
-    color: $brown-900;
-    font-family: $poppins;
-    line-height: 1.2;
-    font-size: 48px;
-    margin-bottom: 36px;
-
-    @include m($lg) {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-
-    @include m($md) {
-        font-size: 32px;
-    }
-}
-
-.subtitle {
-    font-family: $poppins;
-    font-size: 24px;
-    color: $main-color;
-    letter-spacing: 0.3em;
-    line-height: 1.4;
-    text-transform: uppercase;
-    margin-bottom: 36px;
-    display: block;
-
-    @include m($lg) {
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
-}
-
-.text-description {
-    font-size: 24px;
-    line-height: 1.4;
-
-    @include m($md) {
-        font-size: 20px;
-    }
-
-    @include m($sm) {
-        font-size: 18px;
-    }
-}
-
 .ornament {
     position: relative;
 
@@ -162,8 +105,9 @@ a {
         height: 135px;
         color: $main-color;
 
-        @include m($xl) {
-            opacity: 0.2;
+        @include m($xxl) {
+            opacity: 0;
+            overflow: hidden;
         }
     }
 

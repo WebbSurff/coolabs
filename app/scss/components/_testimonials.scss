@@ -24,6 +24,10 @@
 
     &__swiper {
         padding-bottom: 50px;
+
+        @include m($lg) {
+            padding-bottom: 75px;
+        }
     }
 
     &__list {
@@ -94,10 +98,6 @@
 
         @include m($sm) {
             font-size: 16px;
-            max-width: 320px;
-        }
-
-        @include m($xs) {
             max-width: 250px;
         }
     }
@@ -123,6 +123,11 @@
             margin-right: 20px;
         }
 
+        @include m($lg) {
+            width: 25px;
+            height: 25px;
+        }
+
         &:focus {
             outline: 2px solid #f3b611b3;
             outline-offset: 5px;
@@ -138,6 +143,11 @@
         width: 20px;
         height: 20px;
         background-color: $main-color;
+
+        @include m($lg) {
+            width: 30px;
+            height: 30px;
+        }
     }
 
 }

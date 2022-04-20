@@ -20,8 +20,13 @@
         display: flex;
         padding-top: 6%;
 
+        @include m($xxl) {
+            padding-top: 1%;
+        }
+
         @include m($xl) {
             flex-direction: column;
+            padding-top: 0;
         }
     }
 
@@ -30,10 +35,6 @@
             display: block;
             right: 0;
             top: -4%;
-
-            @include m($md) {
-                display: none;
-            }
         }
     }
 
@@ -52,10 +53,18 @@
 
     &__subtitle {
         color: $brown-900;
+
+        @include m($xl) {
+            color: $main-color;
+        }
     }
 
     &__title {
         color: $brown-700;
+
+        @include m($xl) {
+            color: $brown-900;
+        }
     }
 
     &__text {
@@ -63,13 +72,18 @@
         color: $beige-100;
 
         @include m($xl) {
-            margin-bottom: 30px;
+            color: $brown-700;
         }
     }
 
     &__arrow {
         border-radius: 15px;
         align-self: flex-start;
+
+        @include m($xl) {
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
 
         &::after {
             margin-left: 30px;

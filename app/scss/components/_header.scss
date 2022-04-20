@@ -11,29 +11,31 @@
     }
 
     &__logo {
-        margin-right: 20px;
         border-radius: 10px;
 
-        @include m($sm) {
-            width: 70%;
+        @include m($md) {
+            width: 40%;
         }
     }
 
     &__nav {
-        width: 55%;
-        margin-right: auto;
+        flex: auto;
         display: flex;
         align-items: center;
     }
 
     &__menu {
+        width: 65%;
+        margin: 0 auto;
+
         @include m($xl) {
-            display: none;
+            width: auto;
+            margin: 0;
         }
     }
 
     &__call-us {
-        margin-right: 74px;
+        margin-right: 4%;
         color: $beige-100;
         display: flex;
         align-items: center;
@@ -82,12 +84,15 @@
 
         @include m($xl) {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             position: relative;
             z-index: 20;
             padding: 8px 0;
-            width: 30px;
+            width: 44px;
             overflow: hidden;
-            height: 21px;
+            height: 44px;
             margin-right: 10px;
         }
 
@@ -111,11 +116,11 @@
         }
 
         &::before {
-            top: 0;
+            top: 7px;
         }
 
         &::after {
-            bottom: 3px;
+            bottom: 7px;
         }
 
         &.active {
@@ -123,13 +128,13 @@
 
             &::before {
                 transform: rotate(45deg);
-                top: 9px;
+                top: 26px;
             }
 
 
             &::after {
                 transform: rotate(-45deg);
-                bottom: 10px;
+                bottom: 16px;
             }
         }
     }

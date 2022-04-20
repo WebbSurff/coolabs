@@ -4,7 +4,7 @@
     background-position: left;
 
     @include m ($xxl) {
-        background-size: 40% 87%;
+        background-size: 45% 100%;
     }
 
     @include m($xl) {
@@ -14,7 +14,11 @@
     &__content {
         margin-left: auto;
         padding: 35px 0;
-        max-width: 736px;
+        max-width: 42%;
+
+        @include m($xxl) {
+            max-width: 48%;
+        }
 
         @include m($xl) {
             max-width: 100%;
@@ -75,7 +79,7 @@
 
     &__item {
         color: $brown-900;
-        flex: 0 1 17%;
+        flex: 0 1 20%;
 
 
         &:not(:last-child) {
@@ -86,7 +90,7 @@
                 width: 20px;
                 height: 20px;
                 position: absolute;
-                right: -80%;
+                right: -50%;
                 top: 50%;
                 background-color: $main-color;
                 border-radius: 50%;

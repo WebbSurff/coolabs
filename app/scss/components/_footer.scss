@@ -15,8 +15,8 @@
         align-items: center;
 
         @include m($xl) {
-            flex-direction: column;
-            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: unset;
         }
     }
 
@@ -47,6 +47,7 @@
     &__contact {
         @include m($xl) {
             margin-bottom: 20px;
+            margin-right: 10%;
         }
     }
 
@@ -82,6 +83,10 @@
         border-radius: 20px;
         fill: $beige-100;
 
+        @include m($lg) {
+            display: flex;
+        }
+
         svg {
             width: 18px;
             height: 20px;
@@ -101,21 +106,24 @@
 
 .info-nav {
     display: flex;
-    flex: 0 1 23%;
-    justify-content: space-between;
+    flex: 1 1 auto;
+    margin-bottom: 20px;
 
-    @include m($xl) {
-        order: 2;
-    }
 
     &__items {
-        @include m($xl) {
-            &:not(:last-child) {
-                margin-right: 35px;
-            }
+        margin: 0 auto;
+
+        &:not(:last-child) {
+            margin-right: 15%;
         }
 
+        @include m($md) {
+            margin: 0;
 
+            &:not(:last-child) {
+                margin-right: 10%;
+            }
+        }
     }
 
     &__title {
@@ -132,6 +140,10 @@
 
     &__link {
         border-radius: 20px;
+
+        @include m($lg) {
+            display: block;
+        }
 
         &:hover {
             color: $pistachio;

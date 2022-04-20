@@ -2,13 +2,10 @@
     margin-bottom: 85px;
     position: relative;
 
-    @include m($xl) {
+    @include m($lg) {
         margin-bottom: 50px;
     }
 
-    @include m($sm) {
-        margin-bottom: 30px;
-    }
 
     &::before {
         content: '';
@@ -66,10 +63,6 @@
             bottom: 0;
             left: 0;
             display: block;
-
-            @include m($xl) {
-                display: none;
-            }
         }
     }
 
@@ -79,8 +72,11 @@
         font-size: 72px;
         line-height: 1.1;
         max-width: 720px;
+        color: $brown-900;
+        font-weight: 600;
+        font-family: $poppins;
 
-        @include m($big) {
+        @include m($xxl) {
             font-size: 54px;
         }
 
@@ -102,10 +98,12 @@
 
     &__text {
         max-width: 685px;
+        font-size: 24px;
+        line-height: 1.4;
         margin-bottom: 64px;
         @include line-clamp (6);
 
-        @include m($big) {
+        @include m($xxl) {
             margin-bottom: 45px;
         }
 
@@ -132,7 +130,7 @@
         z-index: 10;
         width: 59%;
 
-        @include m($big) {
+        @include m($xxl) {
             padding: 12px 65px 12px 15px;
         }
 
