@@ -26,6 +26,8 @@
         background-repeat: no-repeat;
         background-size: 50.5% 90%;
         background-position: top right;
+        color: #fff;
+
 
         @include m($xl) {
             background-size: cover;
@@ -34,7 +36,7 @@
 
             &::before {
                 content: '';
-                background-color: rgb(255 255 255 /80%);
+                background: linear-gradient(3600deg, rgba(86, 86, 86, 0.7906512946975666) 0%, rgba(0, 0, 0, 0.2612395299916842) 56%, rgba(32, 91, 108, 0.6337885495995272) 100%);
                 position: absolute;
                 right: 0;
                 left: 0;
