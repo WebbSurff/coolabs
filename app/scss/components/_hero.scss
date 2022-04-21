@@ -26,13 +26,13 @@
         background-repeat: no-repeat;
         background-size: 50.5% 90%;
         background-position: top right;
-        color: #fff;
 
 
         @include m($xl) {
             background-size: cover;
             background-position: center;
             position: relative;
+            color: #fff;
 
             &::before {
                 content: '';
