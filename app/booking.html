@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Booking Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="css/booking.min.css">
+    <title>Page Coolabs Working Space</title>
 </head>
 
 <body>
@@ -15,164 +16,44 @@
         <div class="content">
 
             <header class="header">
-                <div class="container">
-                    <div class="header__inner">
-                        <a class="header__logo logo" href="#">
-                            <img class="header__logo-img" src="images/header/logo.svg" alt="logo coolabs" width="162"
-                                height="46">
-                        </a>
-                        <nav class="header__menu menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a class="menu__link menu__link--active" href="#">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">
-                                        Events
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">
-                                        Gallery
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">
-                                        Facilities
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">
-                                        Pricing
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <a class="header__call-us" href="tel:+1234567890">
-                            <svg>
-                                <use xlink:href="images/sprite.svg#call-us"></use>
-                            </svg>
-                            +123 456 7890
-                        </a>
-                        <button class="header__button button" type="button">
-                            Sign Up
-                        </button>
-                    </div>
-                </div>
-            </header>
+    <div class="container">
+        <div class="header__inner">
 
-            <main class="main">
-                <section class="booking">
-                    <div class="booking__bg"></div>
-                    <div class="container">
-                        <span class="booking__subtitle subtitle">
-                            BOOKING FORM
-                        </span>
-                        <h2 class="booking__title title">
-                            Choose The Space
-                            You Need
-                        </h2>
-                        <form class="booking__form form-space" action="#">
-                            <div class="form-space__inner">
-                                <div class="form-space__content">
-                                    <label class="form-space__label">
-                                        First Name
-                                        <input class="form-space__input" type="text" name="name-booking"
-                                            placeholder="Samantha Allen" required>
-                                    </label>
-
-                                    <label class="form-space__label">
-                                        Last Name
-                                        <input class="form-space__input" type="text" name="surname-ooking"
-                                            placeholder="Smith" required>
-                                    </label>
-                                </div>
-                                <div class="form-space__content">
-                                    <label class="form-space__label form-space__label--big">
-                                        E-Mail Address
-                                        <input class="form-space__input" type="email" name="email-booking"
-                                            placeholder="samantha.allen.smith@mail.com" required>
-                                    </label>
-
-                                    <label class="form-space__label form-space__label--date">
-                                        Date
-                                        <input class="form-space__input form-space__input--date" type="text"
-                                            id="input-date" name="date-booking" required readonly>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-space__choise">
-                                <label class="form-space__label">
-                                    Select Room
-                                </label>
-                                <ul class="form-space__list">
-                                    <li class="form-space__item">
-                                        <img class="form-space__img" src="images/booking/1.jpg" alt="Shared Desk"
-                                            width="319" height="300">
-                                        <input class="form-space__radio" type="radio" id="shared-desk"
-                                            name="choose-place" checked value="shared-desk">
-                                        <label class="form-space__title" for="shared-desk">
-                                            Shared Desk
-                                        </label>
-
-                                    </li>
-                                    <li class="form-space__item">
-                                        <img class="form-space__img" src="images/booking/2.jpg" alt="Private Desk"
-                                            width="319" height="300">
-                                        <input class="form-space__radio" type="radio" id="privat-desk"
-                                            name="choose-place" value="privat-desk">
-                                        <label class="form-space__title" for="privat-desk">
-                                            Private Desk
-                                        </label>
-
-                                    </li>
-                                    <li class="form-space__item">
-                                        <img class="form-space__img" src="images/booking/3.jpg" alt="Meeting Room"
-                                            width="319" height="300">
-                                        <input class="form-space__radio" type="radio" id="meeting-room"
-                                            name="choose-place" value="meeting-room">
-                                        <label class="form-space__title" for="meeting-room">
-                                            Meeting Room
-                                        </label>
-
-                                    </li>
-                                    <li class="form-space__item">
-                                        <img class="form-space__img" src="images/booking/4.jpg" alt="shared" width="319"
-                                            height="300">
-                                        <input class="form-space__radio" type="radio" id="conference-room"
-                                            name="choose-place" value="conference-room">
-                                        <label class="form-space__title" for="conference-room">
-                                            Conference Room
-                                        </label>
-                                    </li>
-                                </ul>
-                                <button class="form-space__btn button" type="submit">
-                                    Book Now
-                                </button>
-                            </div>
-
-                        </form>
-                    </div>
-                </section>
-
-            </main>
-
-        </div>
-
-        <footer class="footer">
-            <div class="container">
-                <h2 class="sr-only">
-                    our address, social networks and subscription
-                </h2>
-                <div class="footer__inner">
-                    <div class="footer__contact">
-                        <a class="footer__logo" href="#">
-                            <img class="footer__logo-img" src="images/footer/logo.svg" alt="footer logo" width="323"
-                                height="82">
-                        </a>
-                        <address class="footer__address address-date">
+            <nav class="header__nav">
+                <a class="header__logo logo" href="#">
+                    <img class="header__logo-img" src="images/header/logo.svg" alt="logo coolabs" width="162"
+                        height="46">
+                </a>
+                <div class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active int" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Events
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Gallery
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Facilities
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Pricing
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="menu__mobile">
+                        <address class="address-date">
                             <div class="address-date__text">
                                 <p>
                                     2755 Commercial St SE Salem, Corner with
@@ -199,93 +80,251 @@
                             </ul>
                         </address>
                     </div>
-                    <ul class="footer__info info-nav">
-                        <li class="info-nav__items">
-                            <h3 class="info-nav__title">
-                                Information
-                            </h3>
-                            <ul class="info-nav__list">
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        FAQ
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        Terms & Conditions
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        Pricing
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        User Account
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        Legal Regulations
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="info-nav__items">
-                            <h3 class="info-nav__title">
-                                Social Media
-                            </h3>
-                            <ul class="info-nav__list">
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        Facebook
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        Instagram
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        LinkedIn
-                                    </a>
-                                </li>
-                                <li class="info-nav__item">
-                                    <a class="info-nav__link" href="#">
-                                        Twitter
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="footer__subscribe">
-                        <h3 class="footer__subscribe-title title">
-                            Newsletter
-                        </h3>
-                        <p class="footer__text">
-                            Subscribe to our newsletter to get the update news related to our latest properties and
-                            time-limited discounts.
-                        </p>
-                        <form class="subscribe-form" action="#">
-                            <label class="sr-only" for="footer-subscribe">
-                                enter your email for subscribe
-                            </label>
-                            <input class="subscribe-form__input" id="footer-subscribe" name="email-footer" type="email"
-                                placeholder="Enter your e-mail address" required>
-                            <button class="subscribe-form__button button" type="submit">
-                                Subscribe
-                            </button>
+                </div>
+            </nav>
+            <a class="header__call-us int" href="tel:+1234567890">
+                <svg>
+                    <use xlink:href="images/sprite.svg#call-us"></use>
+                </svg>
+                +123 456 7890
+            </a>
+            <button data-da=".menu ,1200, last" class="header__button button int" type="button">
+                Sign Up
+            </button>
+            <button class="header__burger int" type="button">
+                <span class="header__burger-line"></span>
+                <span class="sr-only">
+                    tap to open the mobile menu
+                </span>
+            </button>
+        </div>
+    </div>
+</header>
+
+            <main class="main">
+                <section class="booking section--int ">
+                    <div class="booking__bg ornament booking__ornament"></div>
+                    <div class="container">
+                        <span class="booking__subtitle section__subtitle">
+                            booking form
+                        </span>
+                        <h2 class="booking__title section__title">
+                            Choose The Space
+                            You Need
+                        </h2>
+                        <form class="booking__form form-space" action="#">
+                            <div class="form-space__inner">
+                                <div class="form-space__content">
+                                    <label class="form-space__label">
+                                        First Name
+                                        <input class="form-space__input int" type="text" name="name-booking"
+                                            placeholder="Samantha Allen" required>
+                                    </label>
+
+                                    <label class="form-space__label">
+                                        Last Name
+                                        <input class="form-space__input int" type="text" name="surname-ooking"
+                                            placeholder="Smith" required>
+                                    </label>
+                                </div>
+                                <div class="form-space__content">
+                                    <label class="form-space__label form-space__label--big">
+                                        E-Mail Address
+                                        <input class="form-space__input int" type="email" name="email-booking"
+                                            placeholder="samantha.allen.smith@mail.com" required>
+                                    </label>
+
+                                    <label class="form-space__label form-space__label--date">
+                                        Date
+                                        <input class="form-space__input form-space__input--date int" type="text"
+                                            id="input-date" name="date-booking" required readonly>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-space__choise">
+                                <label class="form-space__label">
+                                    Select Room
+                                </label>
+                                <ul class="form-space__list">
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/1.jpg" alt="Shared Desk"
+                                            width="319" height="300">
+                                        <input class="form-space__radio int" type="radio" id="shared-desk"
+                                            name="choose-place" checked value="shared-desk">
+                                        <label class="form-space__title" for="shared-desk">
+                                            Shared Desk
+                                        </label>
+
+                                    </li>
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/2.jpg" alt="Private Desk"
+                                            width="319" height="300">
+                                        <input class="form-space__radio int" type="radio" id="privat-desk"
+                                            name="choose-place" value="privat-desk">
+                                        <label class="form-space__title" for="privat-desk">
+                                            Private Desk
+                                        </label>
+
+                                    </li>
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/3.jpg" alt="Meeting Room"
+                                            width="319" height="300">
+                                        <input class="form-space__radio int" type="radio" id="meeting-room"
+                                            name="choose-place" value="meeting-room">
+                                        <label class="form-space__title" for="meeting-room">
+                                            Meeting Room
+                                        </label>
+
+                                    </li>
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/4.jpg" alt="shared" width="319"
+                                            height="300">
+                                        <input class="form-space__radio int" type="radio" id="conference-room"
+                                            name="choose-place" value="conference-room">
+                                        <label class="form-space__title" for="conference-room">
+                                            Conference Room
+                                        </label>
+                                    </li>
+                                </ul>
+                                <button class="form-space__btn button int" type="submit">
+                                    Book Now
+                                </button>
+                            </div>
+
                         </form>
                     </div>
-                </div>
-            </div>
-        </footer>
+                </section>
+            </main>
+
+        </div>
+
+               <footer class="footer">
+           <div class="container">
+               <h2 class="sr-only">
+                   our address, social networks and subscription
+               </h2>
+               <div class="footer__inner">
+                   <div class="footer__contact">
+                       <a class="footer__logo int" href="#">
+                           <img class="footer__logo-img" src="images/footer/logo.svg" alt="footer logo" width="323"
+                               height="82">
+                       </a>
+                       <address class="footer__address address-date">
+                           <div class="address-date__text">
+                               <p>
+                                   2755 Commercial St SE Salem, Corner with
+                                   Sunny Boulevard, 3755 Commercial OR 97302
+                               </p>
+                           </div>
+                           <ul class="address-date__list">
+                               <li class="address-date__item">
+                                   <a class="address-date__link int" href="tel:+1234567890">
+                                       <svg>
+                                           <use xlink:href="images/sprite.svg#call-us"></use>
+                                       </svg>
+                                       +123 456 7890
+                                   </a>
+                               </li>
+                               <li class="address-date__item">
+                                   <a class="address-date__link int" href="mailto:hello@coolabs.com">
+                                       <svg>
+                                           <use xlink:href="images/sprite.svg#letter"></use>
+                                       </svg>
+                                       hello@coolabs.com
+                                   </a>
+                               </li>
+                           </ul>
+                       </address>
+                   </div>
+                   <ul class="footer__info info-nav">
+                       <li class="info-nav__items">
+                           <h3 class="info-nav__title">
+                               Information
+                           </h3>
+                           <ul class="info-nav__list">
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       FAQ
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       Terms & Conditions
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       Pricing
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       User Account
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       Legal Regulations
+                                   </a>
+                               </li>
+                           </ul>
+                       </li>
+                       <li class="info-nav__items">
+                           <h3 class="info-nav__title">
+                               Social Media
+                           </h3>
+                           <ul class="info-nav__list">
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       Facebook
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       Instagram
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       LinkedIn
+                                   </a>
+                               </li>
+                               <li class="info-nav__item">
+                                   <a class="info-nav__link int" href="#">
+                                       Twitter
+                                   </a>
+                               </li>
+                           </ul>
+                       </li>
+                   </ul>
+                   <div class="footer__subscribe">
+                       <h3 class="footer__subscribe-title title">
+                           Newsletter
+                       </h3>
+                       <p class="footer__text">
+                           Subscribe to our newsletter to get the update news related to our latest properties and
+                           time-limited discounts.
+                       </p>
+                       <form class="subscribe-form" action="#">
+                           <label class="sr-only" for="footer-subscribe">
+                               enter your email for subscribe
+                           </label>
+                           <input class="subscribe-form__input int" id="footer-subscribe" name="email-footer"
+                               type="email" placeholder="Enter your e-mail address" required>
+                           <button class="subscribe-form__button button int" type="submit">
+                               Subscribe
+                           </button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </footer>
 
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 

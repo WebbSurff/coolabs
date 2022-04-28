@@ -74,6 +74,10 @@
     &__item {
         &:not(:last-child) {
             margin-bottom: 17px;
+
+            @include m($lg) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -85,6 +89,7 @@
 
         @include m($lg) {
             display: flex;
+            padding-bottom: 17px;
         }
 
         svg {
@@ -135,6 +140,10 @@
     &__item {
         &:not(:last-child) {
             margin-bottom: 16px;
+
+            @include m($lg) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -143,6 +152,10 @@
 
         @include m($lg) {
             display: block;
+
+            @include m($lg) {
+                padding-bottom: 16px;
+            }
         }
 
         &:hover {

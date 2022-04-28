@@ -52,15 +52,33 @@
     }
 
     &__item {
+        display: block;
+        width: 25%;
+
+        @include m($lg) {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-right: -30px;
+
+            @include m($lg) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__link {
         display: flex;
         flex-direction: column;
-        cursor: pointer;
+        height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        position: relative;
         z-index: 5;
         transition: padding 0.3s, margin 0.3s, border-radius 0.3s, width 0.3s, flex 0.3s, z-index 0.5s, opacity 0.3s, transform 0.3s;
-        position: relative;
 
         &::after {
             content: '';
@@ -73,48 +91,30 @@
             z-index: -1;
         }
 
-        &:not(:last-child) {
-            margin-right: 20px;
-
-            @include m($lg) {
-                margin-right: 0;
-                margin-bottom: 20px;
-
-                &::after {
-                    background-color: rgba(0, 0, 0, 0.7);
-                }
+        @media(any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
             }
         }
 
-        &--room {
-            flex: 1 1 5%;
+        &:hover {
+            color: #fff;
         }
 
-        &--desk {
-            flex: 1 1 9%;
+        &--desk,
+        &--room {
+            width: 80%;
+
+            @include m($lg) {
+                width: 100%;
+            }
         }
 
         &--shared {
             pointer-events: none;
-            flex: 1 1 45%;
+            width: 190%;
+            padding: 96px 0 0 64px;
             border-radius: 0px 40% 0px 0px;
-
-            .price-preview__link {
-                padding: 96px 0 0 64px;
-                border-radius: 0px 40% 0px 0px;
-
-                @include m($xxl) {
-                    padding: 35px 0 0 30px;
-                }
-
-                @include m($lg) {
-                    border-radius: 0;
-                }
-            }
-
-            .price-preview__item.active {
-                padding: 0;
-            }
 
             &::after {
                 border-radius: 0px 40% 0px 0px;
@@ -125,18 +125,24 @@
             }
 
             @include m($xxl) {
-                flex: 1 1 27%;
+                padding: 35px 0 0 30px;
             }
 
             @include m($lg) {
                 border-radius: 0;
+                width: 100%;
             }
+
         }
 
         &--shared.remove {
             border-radius: 0;
-            flex: 1 1 9%;
             padding: 0;
+            width: 80%;
+
+            @include m($lg) {
+                width: 100%;
+            }
 
             .price-preview__caption {
                 transform: rotate(-90deg);
@@ -147,21 +153,21 @@
                     margin: 0;
                 }
             }
+
+            border-radius: 0;
         }
 
         &--room,
         &--desk,
         &--shared.remove {
-            .price-preview__link {
-                padding-bottom: 83px;
+            padding-bottom: 83px;
 
-                @include m($lg) {
-                    padding: 35px 0 0 30px;
+            @include m($lg) {
+                padding: 35px 0 0 30px;
+
+                &::after {
+                    background-color: rgba(0, 0, 0, 0.7);
                 }
-            }
-
-            @include m($xxl) {
-                flex: 1 1 0;
             }
 
             @include m($lg) {
@@ -187,33 +193,15 @@
 
         }
 
-
         &.active {
-            flex: 1 0 40%;
+            width: 190%;
             position: relative;
             z-index: 10;
             border-radius: 0px 45% 0px 0px;
             transform: scale(1.1);
             transition: height 0.3s, margin 0.3s, border-radius 0.3s, width 0.3s, transform 0.3s, flex 0.3s;
             animation-name: false;
-
-            .price-preview__link {
-                padding: 96px 0 0 64px;
-                border-radius: 0px 45% 0px 0px;
-
-                @include m($xxl) {
-                    padding: 35px 0 0 30px;
-                }
-
-                @include m($lg) {
-                    border-radius: 0;
-                }
-
-                @include m($sm) {
-                    padding: 24px 0 0 11px;
-                }
-
-            }
+            padding: 96px 0 0 64px;
 
             &::after {
                 border-radius: 0px 45% 0px 0px;
@@ -225,15 +213,18 @@
             }
 
             @include m($xxl) {
-                flex: 1 1 27%;
+                padding: 35px 0 0 30px;
             }
 
             @include m($lg) {
-                flex: auto;
                 border-radius: 0;
-                text-align: center;
                 min-height: 240px;
-                margin: 20px;
+                text-align: center;
+                width: 100%;
+            }
+
+            @include m($sm) {
+                padding: 24px 0 0 11px;
             }
 
             .price-preview__more {
@@ -259,11 +250,6 @@
 
         }
 
-        @media(any-hover: hover) {
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
     }
 
     &__more {
@@ -282,20 +268,6 @@
 
         @include m($sm) {
             font-size: 16px;
-        }
-    }
-
-    &__link {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-
-        @include m($lg) {
-            flex: auto;
-        }
-
-        &:hover {
-            color: #fff;
         }
     }
 
@@ -381,7 +353,8 @@
         @include m($xl) {
             font-size: 20px;
             justify-content: flex-start;
-            margin-top: 20px;
+            padding: 20px 0;
+            margin-top: 10px;
         }
 
         @include m($sm) {

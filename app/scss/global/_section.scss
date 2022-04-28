@@ -1,6 +1,10 @@
 .section {
     margin-bottom: 100px;
 
+    &--int {
+        margin-bottom: 0;
+    }
+
     @include m($xl) {
         margin-bottom: 80px;
     }

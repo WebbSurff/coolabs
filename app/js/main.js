@@ -17,13 +17,14 @@ $(function () {
         event.preventDefault();
     });
 
-    $('.price-preview__item').on('click', function () {
+    $('.price-preview__link').on('click', function () {
         $(this).toggleClass('active')
     });
-    $('.price-preview__item').on('click', function () {
-        $('.price-preview__item--shared').toggleClass('remove')
+
+    $('.price-preview__link').on('click', function () {
+        $('.price-preview__link--shared').toggleClass('remove')
     });
-    $('.price-preview__item, .header__burger').on('click', function () {
+    $('.price-preview__link, .header__burger').on('click', function () {
         $('body').toggleClass('lock');
     });
 
@@ -32,10 +33,9 @@ $(function () {
     });
 
 
-    const price_room = document.querySelector('.price-preview__item--room');
-    const price_desk = document.querySelector('.price-preview__item--desk');
-    const price_share = document.querySelector('.price-preview__item--shared');
-
+    const price_room = document.querySelector('.price-preview__link--room');
+    const price_desk = document.querySelector('.price-preview__link--desk');
+    const price_share = document.querySelector('.price-preview__link--shared');
     const bodyLock = document.querySelector('body');
 
     document.addEventListener('click', function (e) {

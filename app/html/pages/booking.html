@@ -1,0 +1,120 @@
+@@include('../components/_head.html', {
+"title": "Page Coolabs Working Space",
+"css":"booking"
+})
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html')
+
+            <main class="main">
+                <section class="booking section--int ">
+                    <div class="booking__bg ornament booking__ornament"></div>
+                    <div class="container">
+                        <span class="booking__subtitle section__subtitle">
+                            booking form
+                        </span>
+                        <h2 class="booking__title section__title">
+                            Choose The Space
+                            You Need
+                        </h2>
+                        <form class="booking__form form-space" action="#">
+                            <div class="form-space__inner">
+                                <div class="form-space__content">
+                                    <label class="form-space__label">
+                                        First Name
+                                        <input class="form-space__input int" type="text" name="name-booking"
+                                            placeholder="Samantha Allen" required>
+                                    </label>
+
+                                    <label class="form-space__label">
+                                        Last Name
+                                        <input class="form-space__input int" type="text" name="surname-ooking"
+                                            placeholder="Smith" required>
+                                    </label>
+                                </div>
+                                <div class="form-space__content">
+                                    <label class="form-space__label form-space__label--big">
+                                        E-Mail Address
+                                        <input class="form-space__input int" type="email" name="email-booking"
+                                            placeholder="samantha.allen.smith@mail.com" required>
+                                    </label>
+
+                                    <label class="form-space__label form-space__label--date">
+                                        Date
+                                        <input class="form-space__input form-space__input--date int" type="text"
+                                            id="input-date" name="date-booking" required readonly>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-space__choise">
+                                <label class="form-space__label">
+                                    Select Room
+                                </label>
+                                <ul class="form-space__list">
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/1.jpg" alt="Shared Desk"
+                                            width="319" height="300">
+                                        <input class="form-space__radio int" type="radio" id="shared-desk"
+                                            name="choose-place" checked value="shared-desk">
+                                        <label class="form-space__title" for="shared-desk">
+                                            Shared Desk
+                                        </label>
+
+                                    </li>
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/2.jpg" alt="Private Desk"
+                                            width="319" height="300">
+                                        <input class="form-space__radio int" type="radio" id="privat-desk"
+                                            name="choose-place" value="privat-desk">
+                                        <label class="form-space__title" for="privat-desk">
+                                            Private Desk
+                                        </label>
+
+                                    </li>
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/3.jpg" alt="Meeting Room"
+                                            width="319" height="300">
+                                        <input class="form-space__radio int" type="radio" id="meeting-room"
+                                            name="choose-place" value="meeting-room">
+                                        <label class="form-space__title" for="meeting-room">
+                                            Meeting Room
+                                        </label>
+
+                                    </li>
+                                    <li class="form-space__item">
+                                        <img class="form-space__img" src="images/booking/4.jpg" alt="shared" width="319"
+                                            height="300">
+                                        <input class="form-space__radio int" type="radio" id="conference-room"
+                                            name="choose-place" value="conference-room">
+                                        <label class="form-space__title" for="conference-room">
+                                            Conference Room
+                                        </label>
+                                    </li>
+                                </ul>
+                                <button class="form-space__btn button int" type="submit">
+                                    Book Now
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

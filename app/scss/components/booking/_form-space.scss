@@ -1,0 +1,231 @@
+.form-space {
+    &__inner {
+        width: 70%;
+
+        @include m($xl) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        margin-bottom: 64px;
+        justify-content: space-between;
+
+        @include m($md) {
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__label {
+        display: block;
+        text-align: left;
+        color: $main-color;
+        margin-bottom: 12px;
+        font-family: $poppins;
+        font-size: 24px;
+        line-height: 1.4;
+        font-weight: 500;
+        flex: 0 1 560px;
+
+        @include m($md) {
+            flex: auto;
+        }
+
+        @include m($sm) {
+            font-size: 22px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            @include m($md) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        &--big {
+            flex: 0 1 778px;
+
+            @include m($md) {
+                flex: auto;
+            }
+        }
+
+        &--date {
+            flex: 0 1 328px;
+
+            @include m($lg) {
+                flex: 0 1 560px;
+            }
+
+            @include m($md) {
+                flex: auto;
+            }
+
+        }
+    }
+
+    &__input {
+        padding: 12px 12px 12px 0;
+        border-bottom: 1px solid $main-color;
+        width: 100%;
+        font-weight: 400;
+
+        &::placeholder {
+            font-size: 24px;
+            line-height: 1.4;
+            color: $pistachio;
+
+            @include m($sm) {
+                font-size: 16px;
+            }
+        }
+
+        &--date {
+            font-size: 24px;
+            line-height: 1.4;
+            color: $pistachio;
+            background-image: url('../images/booking/calendar.svg');
+            background-repeat: no-repeat;
+            background-size: 28px 28px;
+            background-position: right center;
+
+            @include m($sm) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__choise {
+        text-align: end;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 64px;
+
+        @include m($xl) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item {
+        padding: 48px;
+        text-align: center;
+        position: relative;
+
+        @include m($xxl) {
+            padding: 20px;
+        }
+
+        @include m($xl) {
+            margin-bottom: 15px;
+        }
+
+        @include m($sm) {
+            max-height: 250px;
+            padding: 9px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include m($xl) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 28px;
+        object-fit: cover;
+
+        @include m($sm) {
+            margin-bottom: 16px;
+            height: 70%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        font-family: $poppins;
+        transition: color 0.3s;
+
+        @include m($sm) {
+            font-size: 21px;
+        }
+    }
+
+    &__radio {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &+.form-space__title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            border: 3px solid #ccc;
+            cursor: pointer;
+            outline: transparent;
+            transition: border-color 0.3s, outline 0.3s;
+        }
+
+        &:checked+.form-space__title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border: 4px solid $main-color;
+        }
+
+        &:checked+.form-space__title {
+            color: $main-color;
+        }
+
+        &:hover {
+            &+.form-space__title::before {
+                border-color: $main-color;
+            }
+
+            &+.form-space__title {
+                color: $main-color;
+            }
+        }
+
+        &:focus {
+            &+.form-space__title::before {
+                outline: 2px solid #f3b611b3;
+                outline-offset: 5px;
+            }
+
+        }
+
+    }
+}
+
+.air-datepicker {
+    border: none;
+
+    &-nav {
+        justify-content: center;
+
+        &--action {
+            display: none;
+        }
+    }
+}

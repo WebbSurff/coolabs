@@ -12,15 +12,21 @@
         border-radius: 50%;
         border: 10px solid #fff;
         background-color: $brown-900;
-        right: 25%;
+        left: 72.5%;
         top: 10%;
+
+        @include m($xl) {
+            display: none;
+        }
     }
 
-    &::before {
-        @extend .ornament;
-        color: $main-color;
-        right: 30%;
-        top: 0;
+    &__ornament {
+        &::before {
+            color: $main-color;
+            right: 110%;
+            top: -5%;
+            display: block;
+        }
     }
 
     &__bg {
@@ -34,173 +40,38 @@
         right: 0;
         bottom: 49%;
         left: 72%;
+
+        @include m($xl) {
+            display: none;
+        }
     }
 
     &__subtitle {
         margin-bottom: 24px;
+
+        @include m($xl) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        @include m($md) {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
     }
 
     &__title {
         font-size: 72px;
         margin-bottom: 64px;
         max-width: 725px;
-    }
-}
 
-
-.form-space {
-    &__inner {
-        width: 70%;
-    }
-
-    &__content {
-        display: flex;
-        margin-bottom: 64px;
-        justify-content: space-between;
-    }
-
-    &__label {
-        display: block;
-        text-align: left;
-        color: $main-color;
-        margin-bottom: 12px;
-        font-family: $poppins;
-        font-size: 24px;
-        line-height: 1.4;
-        font-weight: 500;
-        flex: 0 1 560px;
-
-        &:not(:last-child) {
-            margin-right: 25px;
+        @include m($xl) {
+            font-size: 50px;
         }
 
-        &--big {
-            flex: 0 1 778px;
-        }
-
-        &--date {
-            flex: 0 1 328px;
-        }
-    }
-
-    &__input {
-        padding: 12px 12px 12px 0;
-        border-bottom: 1px solid $main-color;
-        width: 100%;
-        font-weight: 400;
-
-        &::placeholder {
-            font-size: 24px;
-            line-height: 1.4;
-            color: $pistachio;
-        }
-
-        &--date {
-            font-size: 24px;
-            line-height: 1.4;
-            color: $pistachio;
-            background-image: url('../images/booking/calendar.svg');
-            background-repeat: no-repeat;
-            background-size: 28px 28px;
-            background-position: right center;
-        }
-    }
-
-    &__choise {
-        text-align: end;
-    }
-
-    &__list {
-        display: flex;
-        margin-top: 12px;
-        margin-bottom: 64px;
-    }
-
-    &__item {
-        padding: 48px;
-        text-align: center;
-        position: relative;
-
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-
-    }
-
-    &__img {
-        margin-bottom: 28px;
-        object-fit: cover;
-    }
-
-    &__title {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.4;
-        font-family: $poppins;
-        transition: color 0.3s;
-    }
-
-    &__radio {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
-
-        &+.form-space__title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            border: 3px solid #ccc;
-            cursor: pointer;
-            outline: transparent;
-            transition: border-color 0.3s, outline 0.3s;
-        }
-
-        &:checked+.form-space__title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            border: 4px solid $main-color;
-        }
-
-        &:checked+.form-space__title {
-            color: $main-color;
-        }
-
-        &:hover {
-            &+.form-space__title::before {
-                border-color: $main-color;
-            }
-
-            &+.form-space__title {
-                color: $main-color;
-            }
-        }
-
-        &:focus {
-            &+.form-space__title::before {
-                outline: 2px solid #f3b611b3;
-                outline-offset: 5px;
-            }
-
-        }
-
-    }
-}
-
-.air-datepicker {
-    border: none;
-
-    &-nav {
-        justify-content: center;
-
-        &--action {
-            display: none;
+        @include m($md) {
+            margin-bottom: 40px;
+            font-size: 38px;
         }
     }
 }

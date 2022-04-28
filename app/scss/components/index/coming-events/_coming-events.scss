@@ -1,0 +1,101 @@
+.coming-events {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $main-color;
+        top: 0;
+        right: 58%;
+        left: 0;
+        bottom: 33%;
+        z-index: -1;
+
+        @include m($xl) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        padding-top: 6%;
+
+        @include m($xxl) {
+            padding-top: 1%;
+        }
+
+        @include m($xl) {
+            flex-direction: column;
+            padding-top: 0;
+        }
+    }
+
+    &__ornamernt {
+        &::after {
+            display: block;
+            right: 0;
+            top: -4%;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        max-width: 30%;
+
+        @include m($xl) {
+            margin-right: 0;
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle {
+        color: $brown-900;
+
+        @include m($xl) {
+            color: $main-color;
+        }
+    }
+
+    &__title {
+        color: $brown-700;
+
+        @include m($xl) {
+            color: $brown-900;
+        }
+    }
+
+    &__text {
+        margin-bottom: auto;
+        color: $beige-100;
+
+        @include m($xl) {
+            color: $brown-700;
+        }
+    }
+
+    &__arrow {
+        border-radius: 15px;
+        align-self: flex-start;
+
+        @include m($xl) {
+            justify-content: flex-start;
+            padding: 20px 0;
+            margin-top: 10px;
+        }
+
+        &::after {
+            margin-left: 30px;
+
+            @include m($md) {
+                width: 80px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+
+ 
+}

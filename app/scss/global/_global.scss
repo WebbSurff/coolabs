@@ -31,15 +31,8 @@ body {
 }
 
 input {
-    transition: outline 0.3s, color 0.3s, background-color 0.3s, opacity 0.3s;
-
     &::placeholder {
         transition: opacity 0.3s;
-    }
-
-    &:focus {
-        outline: 2px solid #f3b611b3;
-        outline-offset: 5px;
     }
 
     &:hover {
@@ -47,16 +40,11 @@ input {
             opacity: 0.7;
         }
     }
+
 }
 
 button,
 a {
-    transition: outline 0.3s, color 0.3s, background-color 0.3s, opacity 0.3s;
-
-    &:focus {
-        outline: 2px solid #f3b611b3;
-        outline-offset: 5px;
-    }
 
     &:hover {
         color: $main-color;
@@ -64,6 +52,15 @@ a {
 
     &:active {
         opacity: 0.7;
+    }
+}
+
+.int {
+    transition: all 0.3s;
+
+    &:focus {
+        outline: 2px solid #f3b611b3;
+        outline-offset: 5px;
     }
 }
 

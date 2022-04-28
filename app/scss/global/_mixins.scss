@@ -27,7 +27,8 @@
 }
 
 @mixin hlxl {
-    @media (max-height: 1000px) and (orientation: landscape) {
+
+    @media (max-height: 1000px) and (orientation: landscape) and (max-width: 1200px) {
         @content;
     }
 }

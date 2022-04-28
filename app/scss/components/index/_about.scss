@@ -3,6 +3,10 @@
     background-size: 50% 100%;
     background-position: left;
 
+    .section {
+        margin-bottom: 0;
+    }
+
     @include m ($xxl) {
         background-size: 45% 100%;
     }
