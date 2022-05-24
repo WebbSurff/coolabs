@@ -47,10 +47,8 @@
         height: 20px;
         display: inline-flex;
         background-position: center;
-        background-image: url('../images/sprite.svg#arrow-right-black');
+        background-image: url('../../images/sprite.svg#arrow-right-black');
         transition: transform 0.3s;
-
-
     }
 
     &:hover {

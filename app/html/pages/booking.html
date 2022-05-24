@@ -11,7 +11,10 @@
             @@include('../components/_header.html')
 
             <main class="main">
-                <section class="booking section--int ">
+                <h1 class="sr-only">
+                    booking form
+                </h1>
+                <section class="booking section section--int ">
                     <div class="booking__bg ornament booking__ornament"></div>
                     <div class="container">
                         <span class="booking__subtitle section__subtitle">
@@ -22,38 +25,34 @@
                             You Need
                         </h2>
                         <form class="booking__form form-space" action="#">
-                            <div class="form-space__inner">
-                                <div class="form-space__content">
-                                    <label class="form-space__label">
-                                        First Name
-                                        <input class="form-space__input int" type="text" name="name-booking"
-                                            placeholder="Samantha Allen" required>
-                                    </label>
-
-                                    <label class="form-space__label">
-                                        Last Name
-                                        <input class="form-space__input int" type="text" name="surname-ooking"
-                                            placeholder="Smith" required>
-                                    </label>
-                                </div>
-                                <div class="form-space__content">
-                                    <label class="form-space__label form-space__label--big">
-                                        E-Mail Address
-                                        <input class="form-space__input int" type="email" name="email-booking"
-                                            placeholder="samantha.allen.smith@mail.com" required>
-                                    </label>
-
-                                    <label class="form-space__label form-space__label--date">
-                                        Date
-                                        <input class="form-space__input form-space__input--date int" type="text"
-                                            id="input-date" name="date-booking" required readonly>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-space__choise">
+                            <fieldset class="form-space__inner">
                                 <label class="form-space__label">
-                                    Select Room
+                                    First Name
+                                    <input class="form-space__input int" type="text" name="name-booking"
+                                        placeholder="Samantha Allen" required>
                                 </label>
+
+                                <label class="form-space__label">
+                                    Last Name
+                                    <input class="form-space__input int" type="text" name="surname-booking"
+                                        placeholder="Smith" required>
+                                </label>
+                                <label class="form-space__label form-space__label--email">
+                                    E-Mail Address
+                                    <input class="form-space__input int" type="email" name="email-booking"
+                                        placeholder="samantha.allen.smith@mail.com" required>
+                                </label>
+
+                                <label class="form-space__label form-space__label--date">
+                                    Date
+                                    <input class="form-space__input form-space__input--date int" type="text"
+                                        id="input-date" name="date-booking" required readonly>
+                                </label>
+                            </fieldset>
+                            <fieldset class="form-space__choise">
+                                <h3 class="form-space__label">
+                                    Select Room
+                                </h3>
                                 <ul class="form-space__list">
                                     <li class="form-space__item">
                                         <img class="form-space__img" src="images/booking/1.jpg" alt="Shared Desk"
@@ -95,26 +94,24 @@
                                         </label>
                                     </li>
                                 </ul>
-                                <button class="form-space__btn button int" type="submit">
+                                <button class="form-space__button button int" type="submit">
                                     Book Now
                                 </button>
-                            </div>
-
+                            </fieldset>
                         </form>
                     </div>
                 </section>
             </main>
 
+
+            @@include('../components/_footer.html')
+
+
         </div>
 
-        @@include('../components/_footer.html')
-
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="js/dynamicAdapt.js"></script>
-    <script src="js/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+        <script src="js/dynamicAdapt.js"></script>
+        <script src="js/main.min.js"></script>
 </body>
 
 </html>

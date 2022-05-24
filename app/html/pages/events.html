@@ -1,0 +1,170 @@
+@@include('../components/_head.html', {
+"title": "Get Involved with Us",
+"css":"events"
+})
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html')
+
+            <main class="main">
+                <h1 class="sr-only">
+                    Events
+                </h1>
+                <section class="events section">
+                    <div class="container">
+                        <div class="events__top  ornament events__ornament">
+                            <div class="events__box ornament events__ornament">
+                                <span class="events__subtitle section__subtitle">
+                                    events
+                                </span>
+                                <h2 class="events__title section__title">
+                                    Get Involved
+                                    with Us
+                                </h2>
+                                <p class="events__text section__text">
+                                    We have many events for your self-development. Join our regular and scheduled
+                                    events.
+                                    Available for public and members
+                                    only.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="events__category">
+                            Upcoming Events
+                        </h3>
+
+                        <ul class="events__upcoming  events-upcoming__list">
+                            @@include('../components/_events-upcoming__item.html', {
+                            "time": "2022-04-16",
+                            "month": "april",
+                            "date": "16",
+                            "name": "Fun Public Speaking",
+                            "organization": "with James Morrison 4 - 5 PM",
+                            "modifier": "upcoming"
+                            })
+
+                            @@include('../components/_events-upcoming__item.html', {
+                            "time": "2022-04-20",
+                            "month": "april",
+                            "date": "20",
+                            "name": "Easter Hunter",
+                            "organization": "with Fun Working Club 12 - 6 PM",
+                            })
+
+                            @@include('../components/_events-upcoming__item.html', {
+                            "time": "2022-04-22",
+                            "month": "april",
+                            "date": "22",
+                            "name": "Coolab Collaboration",
+                            "organization": "with Partner Community 1 - 3 PM",
+                            })
+
+                            @@include('../components/_events-upcoming__item.html', {
+                            "time": "2022-04-22",
+                            "month": "april",
+                            "date": "27",
+                            "name": "Mental Health 101",
+                            "organization": "with HR Company 10 AM - 12 PM",
+                            })
+                        </ul>
+
+                        <h3 class="events__category">
+                            Events Documentation
+                        </h3>
+
+                        <ul class="events__details events-upcoming__list events-upcoming__list--inner">
+
+                            <li class="events__details-item">
+                                <div class="events__wrap">
+                                    <time class="events-upcoming__date" datetime="2022-04-13">
+                                        <span class="events-upcoming__month">
+                                            APRIL
+                                        </span>
+                                        <span class="events-upcoming__number">
+                                            13
+                                        </span>
+                                    </time>
+                                    <h4 class="events-upcoming__name">
+                                        Marketing Discussion
+                                    </h4>
+                                    <p class="events-upcoming__organization">
+                                        with Brand Marketing Co.
+                                        1 - 4 PM
+                                    </p>
+                                </div>
+
+                                <img class="events__img" src="images/events/1.jpg" alt="events" width="1283"
+                                    height="458">
+
+                            </li>
+                            <li class="events__details-item">
+                                <div class="events__wrap">
+                                    <time class="events-upcoming__date" datetime="2022-04-5">
+                                        <span class="events-upcoming__month">
+                                            april
+                                        </span>
+                                        <span class="events-upcoming__number">
+                                            5
+                                        </span>
+                                    </time>
+                                    <h4 class="events-upcoming__name">
+                                        Tech Project Talks
+                                    </h4>
+                                    <p class="events-upcoming__organization">
+                                        with Project Manager 10 AM - 3 PM
+                                    </p>
+                                </div>
+
+                                <img class="events__img" src="images/events/2.jpg" alt="events" width="1283"
+                                    height="458">
+
+                            </li>
+                            <li class="events__details-item">
+                                <div class="events__wrap">
+                                    <time class="events-upcoming__date" datetime="2022-03-25">
+                                        <span class="events-upcoming__month">
+                                            march
+                                        </span>
+                                        <span class="events-upcoming__number">
+                                            25
+                                        </span>
+                                    </time>
+                                    <h4 class="events-upcoming__name">
+                                        Money Management
+                                    </h4>
+                                    <p class="events-upcoming__organization">
+                                        with Rebecca Thompson 3 - 7 PM
+                                    </p>
+                                </div>
+
+                                <img class="events__img" src="images/events/3.jpg" alt="events" width="1283"
+                                    height="458">
+
+                            </li>
+                        </ul>
+                        <button class="events__button button int" type="button">
+                            Load More
+                        </button>
+                    </div>
+
+                </section>
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

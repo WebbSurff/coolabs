@@ -1,0 +1,155 @@
+.events {
+    margin-top: 44px;
+    text-align: center;
+
+
+    &__top {
+        margin-bottom: 52px;
+
+        &::before,
+        &::after {
+            display: block;
+        }
+
+        &::before {
+            bottom: 4%;
+            right: 0;
+        }
+
+        &::after {
+            top: 10%;
+            color: $brown-700;
+            right: 8%;
+        }
+    }
+
+    &__box {
+        text-align: center;
+
+        &::before,
+        &::after {
+            display: block;
+        }
+
+        &::before {
+            bottom: 4%;
+        }
+
+        &::after {
+            top: 10%;
+            color: $brown-700;
+            left: 8%;
+        }
+    }
+
+    &__title {
+        max-width: 410px;
+        margin: 0 auto;
+        margin-bottom: 36px;
+    }
+
+    &__text {
+        max-width: 787px;
+        margin: 0 auto;
+    }
+
+    &__category {
+        font-family: $poppins;
+        text-align: left;
+        color: $main-color;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 36px;
+
+        @include m($md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__upcoming {
+        margin-bottom: 48px;
+
+        .events-upcoming__item--upcoming {
+
+            .events-upcoming__number,
+            .events-upcoming__month {
+                color: #fff;
+            }
+        }
+    }
+
+    .events-upcoming__list {
+        &--inner {
+            display: block;
+        }
+    }
+
+    &__details {
+        margin-bottom: 64px;
+
+        @include m($lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__details-item {
+        display: flex;
+        max-height: 458px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 36px;
+        }
+
+        @include m($lg) {
+            flex-direction: column;
+            max-height: none;
+        }
+    }
+
+    &__wrap {
+        padding: 50px 15px;
+        flex: 1 1 31.5%;
+        text-align: center;
+        border: 3px solid $main-color;
+        font-family: $poppins;
+        background-color: #fff;
+        margin-right: 20px;
+
+        @include m($xxl) {
+            padding: 30px 10px;
+        }
+
+        @include m($xl) {
+            flex: 0 0 300px;
+        }
+
+        @include m($lg) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        @include m($md) {
+            flex: 0 0 255px;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+
+        @include m($xxl) {
+            height: 336px;
+        }
+
+        @include m($xl) {
+            height: 297px;
+        }
+
+        @include m($lg) {
+            height: 200px;
+        }
+    }
+}

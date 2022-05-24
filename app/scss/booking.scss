@@ -1,17 +1,4 @@
-@import 'global/fonts';
-@import 'global/reset';
-@import 'global/libs';
-@import 'global/vars';
-@import 'global/mixins';
-@import 'global/global';
+@import 'style';
 
-@import 'global/common';
-@import 'global/section';
-
-@import 'components/index/header/header';
-@import 'components/index/header/menu';
-
-@import 'components/booking/booking';
-@import 'components/booking/form-space';
-
-@import 'components/index/footer';
+@import 'components/pages/booking-page/booking-style';
+@import 'components/pages/booking-page/form-space';

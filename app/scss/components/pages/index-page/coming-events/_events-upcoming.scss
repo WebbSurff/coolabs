@@ -10,11 +10,12 @@
     &__list {
         display: flex;
 
+
         @include m($xl) {
             justify-content: space-around;
         }
 
-        @include m($md) {
+        @include m($lg) {
             flex-direction: column;
         }
     }
@@ -27,10 +28,15 @@
         font-family: $poppins;
         background-color: #fff;
 
+        &--upcoming {
+            background-color: $main-color;
+            color: #fff;
+        }
+
         &:not(:last-child) {
             margin-right: 20px;
 
-            @include m($md) {
+            @include m($lg) {
                 margin-right: 0;
                 margin-bottom: 20px;
             }

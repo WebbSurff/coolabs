@@ -1,25 +1,13 @@
-@import 'global/fonts';
-@import 'global/reset';
-@import 'global/libs';
-@import 'global/vars';
-@import 'global/mixins';
-@import 'global/global';
+@import 'style';
 
-@import 'global/common';
-@import 'global/section';
+@import 'components/pages/index-page/hero';
+@import 'components/pages/index-page/about';
+@import 'components/pages/index-page/we-offer';
 
-@import 'components/index/header/header';
-@import 'components/index/header/menu';
+@import 'components/pages/index-page/coming-events/coming-events';
+@import 'components/pages/index-page/coming-events/events-upcoming';
 
-@import 'components/index/hero';
-@import 'components/index/about';
-@import 'components/index/we-offer';
-
-@import 'components/index/coming-events/coming-events';
-@import 'components/index/coming-events/events-upcoming';
-
-@import 'components/index/price-preview';
-@import 'components/index/our-photos';
-@import 'components/index/testimonials';
-@import 'components/index/get-space';
-@import 'components/index/footer';
+@import 'components/pages/index-page/price-preview';
+@import 'components/pages/index-page/our-photos';
+@import 'components/pages/index-page/testimonials';
+@import 'components/pages/index-page/get-space';

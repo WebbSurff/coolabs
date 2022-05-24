@@ -1,16 +1,14 @@
 .form-space {
     &__inner {
-        width: 70%;
-
-        @include m($xl) {
-            width: 100%;
-        }
-    }
-
-    &__content {
+        max-width: 70%;
         display: flex;
         margin-bottom: 64px;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include m($xl) {
+            max-width: 100%;
+        }
 
         @include m($md) {
             flex-direction: column;
@@ -27,9 +25,10 @@
         font-size: 24px;
         line-height: 1.4;
         font-weight: 500;
-        flex: 0 1 560px;
+        flex: 0 1 47%;
+        margin-right: 25px;
 
-        @include m($md) {
+        @include m($lg) {
             flex: auto;
         }
 
@@ -38,18 +37,17 @@
         }
 
         &:not(:last-child) {
-            margin-right: 25px;
+            margin-bottom: 25px;
 
-            @include m($md) {
-                margin-right: 0;
+            @include m($lg) {
                 margin-bottom: 10px;
             }
         }
 
-        &--big {
-            flex: 0 1 778px;
+        &--email {
+            flex: 0 1 60%;
 
-            @include m($md) {
+            @include m($lg) {
                 flex: auto;
             }
         }
@@ -58,11 +56,8 @@
             flex: 0 1 328px;
 
             @include m($lg) {
-                flex: 0 1 560px;
-            }
-
-            @include m($md) {
                 flex: auto;
+
             }
 
         }
@@ -73,6 +68,7 @@
         border-bottom: 1px solid $main-color;
         width: 100%;
         font-weight: 400;
+        margin-top: 5px;
 
         &::placeholder {
             font-size: 24px;
