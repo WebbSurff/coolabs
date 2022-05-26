@@ -1,0 +1,77 @@
+@@include('../components/_head.html', {
+"title": "contact us",
+"css":"contact"
+})
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html')
+
+            <main class="main">
+                <h1 class="sr-only">
+                    contact us
+                </h1>
+                <section class="contact section  ornament contact__ornament">
+                    <div class="container">
+                        <div class="contact__wrap">
+                            <img class="contact__bg" src="images/contact/bg.jpg" alt="office">
+                            <div class="contact__box">
+                                <span class="contact__subtitle section__subtitle">
+                                    contact
+                                </span>
+                                <h2 class="contact__title section__title section__title--big">
+                                    Let’s Keep in Touch
+                                    with Us
+                                </h2>
+                                <p class="contact__text section__text">
+                                    Reach us faster for new information and interesting offers for your
+                                    work via e-mail.
+                                </p>
+                            </div>
+                            <form class="contact__form" action="#">
+                                <fieldset class="contact__form-wrap">
+                                    <label class="contact__label" for="your-phone">
+                                        Name
+                                    </label>
+                                    <input class="contact__input int" type="text" name="name" id="your-phone"
+                                        placeholder="Samantha Allen" required>
+                                </fieldset>
+                                <fieldset class="contact__form-wrap contact__form-wrap--email">
+                                    <label class="contact__label" for="your-email">
+                                        E-Mail Address
+                                    </label>
+                                    <input class="contact__input int" type="email" name="email"
+                                        placeholder="samantha.allen.smith@mail.com" id="your-email" required>
+                                </fieldset>
+                                <fieldset class="contact__form-wrap  contact__form-wrap--message">
+                                    <label class="contact__label" for="your-message">
+                                        Your Message
+                                    </label>
+                                    <textarea class="contact__textarea int" name="message" id="your-message"></textarea>
+                                    <button class="contact__button button int" type="submit">
+                                        Submit
+                                    </button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

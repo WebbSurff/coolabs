@@ -64,6 +64,11 @@ textarea {
     outline: transparent;
 }
 
+
+textarea {
+    resize: none;
+}
+
 button {
     cursor: pointer;
     background-color: transparent;

@@ -1,0 +1,198 @@
+.contact {
+
+    &::before {
+        display: block;
+        color: $main-color;
+        top: -2%;
+        right: 29%;
+    }
+
+    &__wrap {
+        margin-top: 93px;
+        background-position: right;
+        background-size: 29% 80%;
+        background-repeat: no-repeat;
+        position: relative;
+
+        @include m($xxl) {
+            margin-top: 50px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $main-color;
+            width: 80px;
+            height: 80px;
+            border: 10px solid #fff;
+            top: 17%;
+            right: 4%;
+            z-index: 5;
+            border-radius: 50%;
+
+            @include m($xxl) {
+                display: none;
+            }
+        }
+    }
+
+    &__bg {
+        border-radius: 0 300px 0 0;
+        position: absolute;
+        right: 0;
+        max-width: 452px;
+        height: 873px;
+        bottom: 0;
+        object-fit: cover;
+        object-position: center bottom;
+
+        @include m($xxl) {
+            border-radius: 50%;
+            height: 450px;
+            width: 450px;
+            top: 0;
+        }
+
+        @include m($xl) {
+            display: none;
+        }
+    }
+
+    &__box {
+        max-width: 726px;
+        margin-bottom: 64px;
+
+        @include m($xxl) {
+            max-width: 620px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+    }
+
+    &__form {
+        max-width: 68%;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include m($xl) {
+            max-width: 100%;
+        }
+
+        @include m($md) {
+            flex-direction: column;
+        }
+    }
+
+    &__form-wrap {
+        flex: 0 1 33%;
+        margin-bottom: 64px;
+
+        &--email {
+            flex: 0 1 60%;
+            margin-left: auto;
+
+            @include m($md) {
+                margin-left: 0;
+            }
+
+        }
+
+        &--message {
+            flex: 1;
+            margin-bottom: 0;
+            text-align: right;
+        }
+
+        @include m($xxl) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__label {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        font-family: $poppins;
+        color: $main-color;
+        text-align: left;
+        display: block;
+
+        @include hl {
+            font-size: 21px;
+            line-height: 1;
+        }
+
+        @include m($sm) {
+            font-size: 21px;
+            line-height: 1;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        margin-top: 6px;
+        padding: 18px 18px 18px 0;
+        display: block;
+        border-bottom: 1px solid $main-color;
+
+        @include hl {
+            margin-top: 5px;
+            padding: 10px 10px 10px 0;
+        }
+
+        @include m($sm) {
+            margin-top: 5px;
+            padding: 10px 10px 10px 0;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.4;
+            color: $brown-700;
+
+            @include m($sm) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 278px;
+        border: 1px solid $main-color;
+        padding: 18px;
+        margin-top: 24px;
+        margin-bottom: 48px;
+
+        @include m($xxl) {
+            height: 200px;
+            margin-bottom: 30px;
+        }
+
+        @include hl {
+            height: 150px;
+            margin-top: 15px;
+        }
+
+        @include m($sm) {
+            height: 150px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__button {
+        padding: 16px 112px 18px 111px;
+
+        @include hl {
+            padding: 14px 70px 15px 69px;
+        }
+
+        @include m($sm) {
+            padding: 14px 70px 15px 69px;
+        }
+    }
+}
