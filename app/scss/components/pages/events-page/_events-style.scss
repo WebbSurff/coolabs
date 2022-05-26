@@ -105,6 +105,8 @@
         @include m($lg) {
             flex-direction: column;
             max-height: none;
+            position: relative;
+
         }
     }
 
@@ -116,6 +118,9 @@
         font-family: $poppins;
         background-color: #fff;
         margin-right: 20px;
+        position: relative;
+        z-index: 10;
+        background-color: transparent;
 
         @include m($xxl) {
             padding: 30px 10px;
@@ -127,7 +132,25 @@
 
         @include m($lg) {
             margin-right: 0;
-            margin-bottom: 15px;
+            color: #fff;
+            border: none;
+
+            .events-upcoming__number,
+            .events-upcoming__month {
+                color: #fff;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                background-color: rgb(0 0 0 / 62%);
+            }
+
         }
 
         @include m($md) {
@@ -149,7 +172,14 @@
         }
 
         @include m($lg) {
-            height: 250px;
+            position: absolute;
+            // opacity: .4;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 1;
         }
     }
 }

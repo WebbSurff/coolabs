@@ -14,16 +14,7 @@
     }
 
     &__title {
-        font-size: 72px;
         margin-bottom: 0;
-
-        @include m($xxl) {
-            font-size: 60px;
-        }
-
-        @include m($lg) {
-            font-size: 45px;
-        }
     }
 
     &__subtitle {
@@ -158,6 +149,10 @@
 
         @include m($lg) {
             max-height: 430px;
+        }
+
+        @include hl {
+            max-height: 280px;
         }
     }
 

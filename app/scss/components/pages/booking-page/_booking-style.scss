@@ -61,17 +61,11 @@
     }
 
     &__title {
-        font-size: 72px;
         margin-bottom: 64px;
         max-width: 725px;
 
-        @include m($xl) {
-            font-size: 50px;
-        }
-
         @include m($md) {
             margin-bottom: 40px;
-            font-size: 38px;
         }
     }
 }

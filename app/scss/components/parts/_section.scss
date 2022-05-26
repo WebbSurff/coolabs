@@ -37,6 +37,18 @@
         font-size: 48px;
         margin-bottom: 36px;
 
+        &--big {
+            font-size: 72px;
+
+            @include m($xxl) {
+                font-size: 60px;
+            }
+
+            @include m($lg) {
+                font-size: 45px;
+            }
+        }
+
         @include m($lg) {
             font-size: 40px;
             margin-bottom: 20px;
