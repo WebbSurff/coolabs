@@ -1,0 +1,186 @@
+.facilities {
+
+    &__box {
+        max-width: 560px;
+        margin-top: 93px;
+
+        @include m($xxl) {
+            max-width: 100%;
+        }
+
+        @include m($xl) {
+            margin-top: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 72px;
+        margin-bottom: 0;
+
+        @include m($xxl) {
+            font-size: 60px;
+        }
+
+        @include m($lg) {
+            font-size: 45px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+
+        @include m($lg) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        margin-top: -250px;
+        display: grid;
+        grid-gap: 48px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 5%);
+        margin-bottom: 60px;
+
+        @include m($xxl) {
+            margin-top: 50px;
+            grid-template-rows: repeat(10, 5%);
+            margin-bottom: 40px;
+        }
+
+        @include m($xl) {
+            grid-template-rows: repeat(9, 7%);
+            grid-gap: 20px;
+        }
+
+        @include m($lg) {
+            display: block;
+            margin-bottom: 55px;
+            margin-top: 35px;
+        }
+
+    }
+
+    &__item {
+        height: 100%;
+
+        @include m($lg) {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &--small {
+            grid-column-start: 6;
+            grid-column-end: 9;
+
+            @include m($xxl) {
+                grid-column-start: 5;
+            }
+        }
+
+        &:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 4;
+            grid-row-end: 10;
+
+            @include m($xxl) {
+                grid-column-end: 5;
+                grid-row-start: 1;
+            }
+
+            @include m($xl) {
+                grid-row-end: 5;
+                grid-column-end: 7;
+            }
+
+        }
+
+        &:nth-child(2) {
+            grid-row-start: 2;
+            grid-row-end: 6;
+
+            @include m($xxl) {
+                grid-row-start: 1;
+                grid-row-end: 4;
+                grid-column-start: 5;
+            }
+
+            @include m($xl) {
+                grid-column-start: 7;
+                grid-column-end: 13;
+                grid-row-end: 5;
+            }
+
+
+        }
+
+        &:nth-child(3) {
+            grid-row-start: 7;
+            grid-row-end: 9;
+
+            @include m($xxl) {
+                grid-row-end: 10;
+            }
+
+            @include m($xl) {
+                grid-column-start: 1;
+                grid-column-end: 7;
+            }
+        }
+
+        &:nth-child(4) {
+            grid-column-start: 9;
+            grid-column-end: 13;
+            grid-row-start: 1;
+            grid-row-end: 10;
+
+            @include m($xl) {
+                grid-row-start: 7;
+                grid-column-start: 7;
+                grid-column-end: 13;
+            }
+
+        }
+    }
+
+
+    &__img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        margin-bottom: 24px;
+
+        @include m($xxl) {
+            height: inherit;
+        }
+
+        @include m($lg) {
+            max-height: 430px;
+        }
+    }
+
+    &__info {
+        font-weight: 500;
+        font-family: $poppins;
+        font-size: 24px;
+        line-height: 1.4;
+        color: $brown-900;
+        margin-bottom: 12px;
+        @include line-clamp(2);
+    }
+
+    &__text {
+        max-width: 383px;
+        @include line-clamp(4);
+
+        @include m($lg) {
+            max-width: 100%;
+        }
+    }
+
+    &__link-wrap {
+        text-align: center;
+    }
+}

@@ -1,0 +1,92 @@
+@@include('../components/_head.html', {
+"title": "Our Photos",
+"css":"gallery"
+})
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html')
+
+            <main class="main">
+                <section class="gallery section">
+                    <div class="container">
+                        <div class="gallery__wrap">
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/1.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/2.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/3.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <div class="gallery__box">
+                                    <span class="gallery__subtitle section__subtitle">
+                                        gallery
+                                    </span>
+                                    <h1 class="gallery__title section__title">
+                                        Our
+                                        Photos
+                                    </h1>
+                                    <p class="gallery__text section__text">
+                                        The sneak peek to our cool and cozy place for your work environment.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/4.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/5.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/6.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/8.jpg" alt="gallery">
+                                </a>
+                            </div>
+                            <div class="gallery__item">
+                                <a data-fancybox="gallery" class="gallery__link int" href="images/gallery/1.jpg">
+                                    <img class="gallery__img" src="images/gallery/9.jpg" alt="gallery">
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery__button button int">
+                            Book Now
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
