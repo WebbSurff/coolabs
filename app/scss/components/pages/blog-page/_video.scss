@@ -1,0 +1,104 @@
+.video {
+    margin-bottom: 160px;
+
+    @include m($xxl) {
+        margin-bottom: 100px;
+    }
+
+    @include m($lg) {
+        margin-bottom: 65px;
+    }
+
+    &__box {
+        padding: 83px 10px 82px;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(0 0 0 / 62%);
+            z-index: 0;
+        }
+
+        @include m($xxl) {
+            padding: 50px 10px;
+        }
+
+        @include m($sm) {
+            padding: 35px 10px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+    }
+
+    &__subtitle,
+    &__title,
+    &__text,
+    &__link,
+    &__time {
+        position: relative;
+        z-index: 5;
+    }
+
+    &__title,
+    &__text {
+        max-width: 560px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        color: #fff;
+
+        @include m($xl) {
+            font-size: 36px;
+            max-width: 100%;
+        }
+
+        @include m($md) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 36px;
+
+        @include m($md) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__time {
+        margin-bottom: 36px;
+        padding-left: 40px;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 22px 21px;
+        background-image: url('../images/video/clock.svg');
+    }
+
+    &__link {
+        padding: 18px 104px;
+
+        @include m($xl) {
+            padding: 17px 85px;
+        }
+
+        @include m($sm) {
+            padding: 13px 58px;
+        }
+    }
+}

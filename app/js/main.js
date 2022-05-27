@@ -13,6 +13,35 @@ $(function () {
         }
     });
 
+    var articles = new Swiper('.slider-article', {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        loop: true,
+        speed: 1200,
+        spaceBetween: 20,
+        pagination: {
+            el: ".slider-article__pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            318: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 30,
+            },
+            600: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+
     $(".price-preview__link").on('click', function (event) {
         event.preventDefault();
     });

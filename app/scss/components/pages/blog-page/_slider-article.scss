@@ -1,0 +1,175 @@
+.slider-article {
+    padding: 15px 15px 82px 15px;
+
+    @include m($xxl) {
+        padding: 15px 15px 60px 15px;
+    }
+
+    &__item {
+        height: auto;
+    }
+
+    &__link-img {
+        margin-bottom: 36px;
+        display: block;
+        transition: opacity 0.3s, transform 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        @include m($xxl) {
+            margin-bottom: 24px;
+        }
+
+        @include m($xl) {
+            margin-bottom: 18px;
+        }
+
+        @include m($md) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        object-position: center;
+
+        @include m($xxl) {
+            height: 300px;
+        }
+
+        @include m($xl) {
+            height: 250px;
+        }
+
+        @include m($md) {
+            height: 210px;
+        }
+
+        @include hl {
+            height: 200px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 12px;
+
+        @include m($xl) {
+            font-size: 20px;
+        }
+
+        @include m($md) {
+            font-size: 18px;
+        }
+    }
+
+    &__link-title {
+        display: block;
+        margin-bottom: 18px;
+        max-width: 560px;
+        border-radius: 20px;
+
+        &:hover {
+            .slider-article__title {
+                color: $main-color;
+            }
+        }
+
+        @include m($md) {
+            margin-bottom: 12px;
+        }
+
+        @include hl {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+        transition: color 0.3s;
+        @include line-clamp(4);
+
+        @include m($xxl) {
+            font-size: 38px;
+        }
+
+        @include m($xl) {
+            font-size: 30px;
+        }
+
+        @include m($md) {
+            font-size: 22px;
+        }
+
+        @include hl {
+            font-size: 22px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 36px;
+        max-width: 560px;
+
+        @include line-clamp(5);
+
+        @include m($xxl) {
+            margin-bottom: 24px;
+        }
+
+        @include m($xl) {
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        font-size: 18px;
+        color: $main-color;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: $brown-900;
+    transition: width 0.3s, border-radius 0.3s, background-color 0.3s;
+
+    @include m($sm) {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    &:not(:last-child) {
+        margin-right: 20px;
+
+        @include m($sm) {
+            margin: 5px;
+        }
+    }
+}
+
+.swiper-pagination-bullet-active {
+    width: 145px;
+    background-color: $main-color;
+    border-radius: 50px;
+    transition: width 0.3s, border-radius 0.3s, background-color 0.3s;
+
+    @include m($md) {
+        width: 40px;
+    }
+}

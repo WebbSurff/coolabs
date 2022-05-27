@@ -1,0 +1,114 @@
+.articles {
+    margin-top: 93px;
+
+    @include m($xxl) {
+        margin-top: 50px;
+    }
+
+    @include hl {
+        margin: 35px 0 50px;
+    }
+
+    &__wrap {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 72px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(254 250 250 / 56%);
+            z-index: 0;
+        }
+
+        @include m($xxl) {
+            margin-bottom: 60px;
+        }
+
+        @include m($xl) {
+            margin-bottom: 45px;
+        }
+
+        @include hl {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__ornament {
+        top: 0;
+        left: 0;
+
+        &::after,
+        &::before {
+            display: block;
+        }
+
+        &::after {
+            color: $brown-900;
+            top: 40px;
+            right: 0;
+        }
+
+        &::before {
+            bottom: 48px;
+            left: 0;
+        }
+    }
+
+    &__box {
+        padding: 145px 0;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+
+        @include m($xxl) {
+            padding: 50px 0;
+        }
+
+        @include m($xl) {
+            padding: 25px 0px;
+        }
+    }
+
+    &__subtitle {
+        @include m($xxl) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title {
+        max-width: 560px;
+        margin: 0 auto;
+        margin-bottom: 36px;
+
+        @include m($xxl) {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        @include m($lg) {
+            max-width: 100%;
+            font-size: 40px;
+        }
+
+
+        @include m($md) {
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        max-width: 787px;
+        margin: 0 auto;
+
+        @include m($lg) {
+            font-size: 20px;
+        }
+    }
+}
