@@ -34,20 +34,22 @@
                                     work via e-mail.
                                 </p>
                             </div>
-                            <form class="contact__form" action="#">
+                            <form class="contact__form" id="form" action="#" autocomplete="off" method="POST"
+                                enctype="multipart/form-data">
                                 <fieldset class="contact__form-wrap">
                                     <label class="contact__label" for="your-phone">
                                         Name
                                     </label>
-                                    <input class="contact__input int" type="text" name="name" id="your-phone"
-                                        placeholder="Samantha Allen" required>
+                                    <input class="contact__input input-name int" data-validate-field="name" type="text"
+                                        name="name" id="forName" placeholder="Samantha Allen" autocomplete="off">
                                 </fieldset>
                                 <fieldset class="contact__form-wrap contact__form-wrap--email">
                                     <label class="contact__label" for="your-email">
                                         E-Mail Address
                                     </label>
-                                    <input class="contact__input int" type="email" name="email"
-                                        placeholder="samantha.allen.smith@mail.com" id="your-email" required>
+                                    <input class="contact__input input-mail int" data-validate-field="email"
+                                        type="email" name="email" placeholder="samantha.allen.smith@mail.com"
+                                        id="forEmail" autocomplete="off">
                                 </fieldset>
                                 <fieldset class="contact__form-wrap  contact__form-wrap--message">
                                     <label class="contact__label" for="your-message">
@@ -71,7 +73,7 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.min.js"></script>
 </body>

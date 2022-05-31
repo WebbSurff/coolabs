@@ -1,0 +1,66 @@
+<div class="post__top ornament post__ornament">
+    <span class="post__subtitle section__subtitle">
+        @@subtitle
+    </span>
+    <h1 class="post__title section__title section__title--big">
+        @@title-post
+    </h1>
+
+    <div class="post__info">
+        <div class="post__data">
+            <a class="post__author int" href="@@link">
+                @@author
+            </a>
+            <time class="post__date" datetime="@@datetime">
+                @@date
+            </time>
+        </div>
+
+        <div class="post__repost">
+            <svg width="40" height="40">
+                <use xlink:href="images/sprite.svg#share"></use>
+            </svg>
+            <button class="post__btn"></button>
+            <ul class="post__list">
+                <li class="post__item">
+                    <a class="post__link post__link--twitter" href="#">
+                        <svg width="20" height="20">
+                            <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                        <span class="sr-only">
+                            post to twitter
+                        </span>
+                    </a>
+                </li>
+                <li class="post__item">
+                    <a class="post__link post__link--facebook" href="#">
+                        <svg width="20" height="20">
+                            <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                        <span class="sr-only">
+                            post to facebook
+                        </span>
+                    </a>
+                </li>
+                <li class="post__item">
+                    <a class="post__link post__link--pinterest" href="#">
+                        <svg width="20" height="20">
+                            <use xlink:href="images/sprite.svg#pinterest"></use>
+                        </svg>
+                        <span class="sr-only">
+                            post to pinterest
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="post__like" type="button">
+            <svg width="40" height="40">
+                <use xlink:href="images/sprite.svg#like"></use>
+            </svg>
+            <span class="sr-only">
+                like the article
+            </span>
+        </button>
+    </div>
+</div>

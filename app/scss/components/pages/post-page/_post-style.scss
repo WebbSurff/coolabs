@@ -1,0 +1,436 @@
+.post {
+    margin-top: 82px;
+    margin-bottom: 83px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include m($xl) {
+        margin: 50px 0;
+    }
+
+    @include m($md) {
+        background-image: none !important;
+    }
+
+    &__wrap {
+        padding: 140px 145px 87px 125px;
+
+        @include m($xxl) {
+            padding: 90px 50px;
+        }
+
+        @include m($xl) {
+            padding: 70px 20px;
+        }
+
+        @include m($md) {
+            padding: 0;
+        }
+    }
+
+    &__content {
+        padding: 100px 125px;
+        background: #fff;
+        border-radius: 0 300px 0 0;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $main-color;
+            bottom: 0;
+
+            @include m($md) {
+                display: none;
+            }
+        }
+
+        &::before {
+            width: 20px;
+            height: 97%;
+            left: -20px;
+        }
+
+        &::after {
+            width: 98%;
+            height: 20px;
+            bottom: -20px;
+            left: -20px;
+        }
+
+        @include m($xxl) {
+            padding: 60px 50px;
+        }
+
+        @include m($xl) {
+            padding: 40px 20px;
+        }
+
+        @include m($md) {
+            padding: 0;
+            border-radius: 0;
+        }
+    }
+
+    &__top {
+        margin-bottom: 48px;
+
+        @include m($xxl) {
+            margin-bottom: 30px;
+        }
+
+        @include m($sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__ornament {
+
+        &::before,
+        &::after {
+            display: block;
+            top: -7%;
+            right: 0%;
+        }
+
+        &::after {
+            color: $brown-900;
+            top: 29%;
+            right: -7%;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+
+        @include m($sm) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__title {
+        max-width: 1015px;
+        margin-bottom: 48px;
+        @include line-clamp(5);
+
+        @include m($xl) {
+            font-size: 50px;
+        }
+
+        @include m($md) {
+            margin-bottom: 30px;
+            font-size: 38px;
+        }
+
+        @include m($sm) {
+            font-size: 29px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        @include m($sm) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__data {
+        font-size: 18px;
+        font-weight: 500;
+        color: $pistachio;
+        margin-right: auto;
+        padding-right: 10px;
+
+        @include m($sm) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__author,
+    &__date {
+        display: block;
+        padding-left: 40px;
+        background-repeat: no-repeat;
+        background-size: 21px 21px;
+        background-position: left;
+    }
+
+    &__author {
+        margin-bottom: 13px;
+        background-image: url('../images/interview/user.svg');
+        border-radius: 10px;
+        transition: color 0.3s;
+    }
+
+    &__date {
+        background-image: url('../images/interview/time.svg');
+    }
+
+    &__repost {
+        margin-right: 70px;
+        position: relative;
+        cursor: pointer;
+
+        svg {
+            fill: $main-color;
+
+            @include m($sm) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+
+                .post__list {
+                    top: -50px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &.hover {
+            .post__list {
+                top: -50px;
+                opacity: 1;
+                visibility: visible;
+
+                @include m($md) {
+                    top: auto;
+                    bottom: -50px;
+                }
+
+                @include m($sm) {
+                    bottom: -10px;
+                    left: 50px;
+                }
+            }
+        }
+
+        @include m($sm) {
+            margin-right: 0;
+            order: 3;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__list {
+        display: flex;
+        background-color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, top 0.3s, visibility 0.3s, bottom 0.3s, left 0.3s;
+
+        @include m($md) {
+            top: auto;
+            bottom: 0;
+        }
+
+        @include m($sm) {
+            bottom: -10px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            @include m($md) {
+                margin-right: 0;
+            }
+        }
+
+        @include m($lg) {
+            padding: 0 10px;
+        }
+    }
+
+    &__link {
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 40px 40px;
+        background-position: center;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &--twitter {
+            svg {
+                fill: #00acee;
+            }
+        }
+
+        &--facebook {
+            svg {
+                fill: #3b5998;
+            }
+        }
+
+        &--pinterest {
+            svg {
+                fill: #D7143A;
+            }
+        }
+    }
+
+    &__like {
+        transition: fill 0.3s;
+
+        &.active {
+            svg {
+                fill: #dc1d1d;
+            }
+        }
+
+        svg {
+            transition: fill 0.3s, opacity 0.3s;
+            fill: $main-color;
+
+            @include m($sm) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: #dc1d1d;
+                }
+            }
+        }
+
+        @include m($sm) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        display: flex;
+
+        @include m($lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        margin-right: 20px;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 32px;
+
+        @include m($sm) {
+            font-size: 21px;
+        }
+
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.4;
+        opacity: 0.8;
+        max-width: 580px;
+        margin-bottom: 24px;
+
+        @include m($xl) {
+            font-size: 21px;
+        }
+
+        @include m($lg) {
+            max-width: 100%;
+        }
+
+        @include m($sm) {
+            font-size: 18px;
+        }
+    }
+
+    &__wrap-img {
+        position: relative;
+
+        @include m($lg) {
+            display: none;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 24px;
+
+        @include m($xxl) {
+            height: 395px;
+        }
+
+        @include m($xl) {
+            width: 350px;
+            margin-left: auto;
+        }
+
+
+        &--left-radius {
+            border-radius: 500px 0 0 0;
+
+            @include m($xxl) {
+                border-radius: 180px 0 0 0;
+            }
+        }
+
+        &--right-radius {
+            border-radius: 0 500px 0 0;
+
+            @include m($xxl) {
+                border-radius: 0 180px 0 0;
+            }
+        }
+
+
+
+    }
+
+    &__name {
+        display: block;
+        position: absolute;
+        background-color: $main-color;
+        color: #fff;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        font-family: $poppins;
+        padding: 7px 47px 7px 46px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include m($xl) {
+            padding: 7px 20px;
+            font-size: 21px;
+        }
+    }
+}

@@ -7,6 +7,8 @@
 
     &__item {
         height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     &__link-img {
@@ -112,24 +114,19 @@
     }
 
     &__text {
-        margin-bottom: 36px;
+        margin-bottom: 15px;
         max-width: 560px;
-
         @include line-clamp(5);
-
-        @include m($xxl) {
-            margin-bottom: 24px;
-        }
 
         @include m($xl) {
             font-size: 18px;
-            margin-bottom: 18px;
         }
     }
 
     &__date {
         font-weight: 500;
         font-size: 18px;
+        margin-top: auto;
         color: $main-color;
     }
 

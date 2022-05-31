@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/contact.min.css">
     <title>contact us</title>
 </head>
@@ -21,35 +22,45 @@
         <div class="header__inner">
 
             <nav class="header__nav">
-                <a class="header__logo logo" href="#">
+                <a class="header__logo logo" href="index.html">
                     <img class="header__logo-img" src="images/header/logo.svg" alt="logo coolabs" width="162"
                         height="46">
                 </a>
                 <div class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link @@active-home int" href="#">
+                            <a class="menu__link @@active-home int" href="index.html">
                                 Home
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link @@active-events int" href="#">
+                            <a class="menu__link @@active-events int" href="events.html">
                                 Events
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link @@active-galllery int" href="#">
+                            <a class="menu__link @@active-galllery int" href="gallery.html">
                                 Gallery
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link @@active-facilities int" href="#">
+                            <a class="menu__link @@active-facilities int" href="facilities.html">
                                 Facilities
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link @@active-pricing int" href="#">
+                            <a class="menu__link @@active-pricing int" href="pricing.html">
                                 Pricing
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link @@active-blog int" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active int" href="contact.html">
+                                Contact
                             </a>
                         </li>
                     </ul>
@@ -123,20 +134,22 @@
                                     work via e-mail.
                                 </p>
                             </div>
-                            <form class="contact__form" action="#">
+                            <form class="contact__form" id="form" action="#" autocomplete="off" method="POST"
+                                enctype="multipart/form-data">
                                 <fieldset class="contact__form-wrap">
                                     <label class="contact__label" for="your-phone">
                                         Name
                                     </label>
-                                    <input class="contact__input int" type="text" name="name" id="your-phone"
-                                        placeholder="Samantha Allen" required>
+                                    <input class="contact__input input-name int" data-validate-field="name" type="text"
+                                        name="name" id="forName" placeholder="Samantha Allen" autocomplete="off">
                                 </fieldset>
                                 <fieldset class="contact__form-wrap contact__form-wrap--email">
                                     <label class="contact__label" for="your-email">
                                         E-Mail Address
                                     </label>
-                                    <input class="contact__input int" type="email" name="email"
-                                        placeholder="samantha.allen.smith@mail.com" id="your-email" required>
+                                    <input class="contact__input input-mail int" data-validate-field="email"
+                                        type="email" name="email" placeholder="samantha.allen.smith@mail.com"
+                                        id="forEmail" autocomplete="off">
                                 </fieldset>
                                 <fieldset class="contact__form-wrap  contact__form-wrap--message">
                                     <label class="contact__label" for="your-message">
@@ -280,7 +293,7 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.min.js"></script>
 </body>

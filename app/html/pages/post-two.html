@@ -1,0 +1,101 @@
+@@include('../components/_head.html', {
+"title": "Start from Zero - Building a Business",
+"css":"post"
+})
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html', {
+            "active-blog": "menu__link--active"
+            })
+
+            <main class="main">
+                <section class="post section section--int" style="background-image: url('images/blog/bg.jpg');">
+                    <div class="container">
+                        <div class="post__wrap">
+                            <div class="post__content">
+
+                                @@include('../components/_post-head.html', {
+                                "subtitle": "business",
+                                "title-post": "Start from Zero - Building a Business",
+                                "author": "Rebecca Beck",
+                                "datetime": "2022-01-05",
+                                "date": "5 January 2022",
+                                "link": "#"
+                                })
+
+                                <h2>
+                                    How to Start a Business in 7 Easy Steps
+                                </h2>
+                                <div class="post__text">
+                                    <div class="post__left">
+                                        <p>
+                                            If you’re wondering how to start a business, it may be easier than you
+                                            think. Like other successful businesses, you’ll
+                                            want to make sure you have a good idea first. From there, you can build a
+                                            product or service that solves a need for
+                                            consumers. But before you jump into anything, you’ll want to make sure you
+                                            do your research. This is crucial, because
+                                            only an estimated 79.4% of companies survive their first year in operation.1
+                                        </p>
+                                        <p>
+                                            So, whether you’re starting a business in retirement or just looking to earn
+                                            more cash, you’ll want to find the right
+                                            startup growth strategies. Don’t be afraid of being a sole proprietorship
+                                            and starting your company on your own because
+                                            you can always grow and hire employees later on.
+                                        </p>
+                                        <p>
+                                            Identify your target customers: You can do this by looking at who benefits
+                                            from your product. You’ll also want to look
+                                            at factors like age, location and even marital status.
+                                        </p>
+                                    </div>
+                                    <div class="post__right">
+                                        <p>
+                                            Look at competitors: Analyzing competing products or services can give you
+                                            an idea of what already exists in your
+                                            industry. This can help you find ways to improve your idea. It can also help
+                                            you target weaknesses in your product or
+                                            service before you spend time and money creating it. Be sure to note your
+                                            competitor’s prices during this process, which
+                                            will give you a range of how much customers are currently spending on
+                                            similar products.
+                                        </p>
+                                        <div data-da=".post__text,992,0" class="post__wrap-img">
+                                            <img class="post__img post__img--left-radius" src="images/post/3.jpg"
+                                                alt="Lou Samantha" width="580" height="628">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                @@include('../components/_next-post.html', {
+                "name-img":"2",
+                "next-post-title": "Fun Working in Coworking Space",
+                "next-post-link": "post-three.html"
+                })
+
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

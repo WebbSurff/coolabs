@@ -12,11 +12,12 @@
     }
 
     &__logo {
+        max-width: 160px;
         border-radius: 10px;
+    }
 
-        @include m($md) {
-            width: 40%;
-        }
+    &__logo-img {
+        object-fit: contain;
     }
 
     &__nav {
@@ -26,7 +27,7 @@
     }
 
     &__menu {
-        width: 65%;
+        width: 72%;
         margin: 0 auto;
 
         @include m($xl) {

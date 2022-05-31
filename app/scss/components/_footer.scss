@@ -31,6 +31,10 @@
         }
     }
 
+    &__logo-img {
+        object-fit: contain;
+    }
+
     &__subscribe {
         max-width: 580px;
 

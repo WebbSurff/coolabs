@@ -1,0 +1,96 @@
+@@include('../components/_head.html', {
+"title": "Fun Working in Coworking Space",
+"css":"post"
+})
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html', {
+            "active-blog": "menu__link--active"
+            })
+
+            <main class="main">
+                <section class="post section section--int" style="background-image: url('images/blog/bg.jpg');">
+                    <div class="container">
+                        <div class="post__wrap">
+                            <div class="post__content">
+
+                                @@include('../components/_post-head.html', {
+                                "subtitle": "career",
+                                "title-post": "How To Improve Employees Morale?",
+                                "author": "Rob Miller",
+                                "datetime": "2022-01-10",
+                                "date": "10 January 2022",
+                                "link": "#"
+                                })
+
+                                <h2>
+                                    For anyone who has worked for an organization with low morale and an organization
+                                    with high morale.
+                                </h2>
+                                <div class="post__text">
+                                    <div class="post__left">
+                                        <p>
+                                            Companies with strong positive morale typically have strong and positive
+                                            employees. Companies with low morale usually
+                                            have unhappy and unproductive employees.
+                                        </p>
+                                        <p>
+                                            In this deep dive on employee morale, we’ll uncover why it’s crucial for
+                                            organizations to nurture employee morale and
+                                            provide meaningful work to employees.
+
+                                        </p>
+                                        <p>
+                                            We’ll also explain how morale relates to productivity, what factors might
+                                            affect it, and the importance of employee
+                                            morale in remote work.
+                                            By the end of this guide, you will have seven actionable tips to help you
+                                            boost employee morale in your organization.
+                                        </p>
+                                    </div>
+                                    <div class="post__right">
+                                        <p>
+                                            Employee morale is the outlook, satisfaction, attitude, and confidence that
+                                            team members have at work. It’s a reflection
+                                            of how healthy company culture is, how well employees are supported, and how
+                                            engaged employees are. It reveals the
+                                            workplace mood
+                                        </p>
+                                        <div data-da=".post__text,992,0" class="post__wrap-img">
+                                            <img class="post__img post__img--left-radius" src="images/post/4.jpg"
+                                                alt="Lou Samantha" width="580" height="628">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                @@include('../components/_next-post.html', {
+                "name-img":"6",
+                "next-post-title": "Business Management: Managing Working Spirit During Weekdays",
+                "next-post-link": "post-one.html"
+                })
+
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

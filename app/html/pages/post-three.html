@@ -1,0 +1,104 @@
+@@include('../components/_head.html', {
+"title": "Fun Working in Coworking Space",
+"css":"post"
+})
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/_header.html', {
+            "active-blog": "menu__link--active"
+            })
+
+            <main class="main">
+                <section class="post section section--int" style="background-image: url('images/blog/bg.jpg');">
+                    <div class="container">
+                        <div class="post__wrap">
+                            <div class="post__content">
+
+                                @@include('../components/_post-head.html', {
+                                "subtitle": "lifestyle",
+                                "title-post": "Fun Working in Coworking Space",
+                                "author": "Jhon Lock",
+                                "datetime": "2022-01-27",
+                                "date": "27 January 2022",
+                                "link": "#"
+                                })
+
+                                <h2>
+                                    What does the perfect coworking space look like?
+                                </h2>
+                                <div class="post__text">
+                                    <div class="post__left">
+                                        <p>
+                                            Coworking spaces are becoming more popular every day, and many cities are
+                                            home to one or two shared offices nowadays. In
+                                            2018, an estimated more than 14.000 spaces were opened worldwide, and in
+                                            2019 this number will only be higher. And the
+                                            perfect coworking space probably exists.
+
+                                        </p>
+                                        <p>
+                                            This fast growth goes hand in hand with a growing number of freelancers,
+                                            remote workers, and digital nomads. Many
+                                            companies realize that working online saves a lot of money and keeps
+                                            employees happy and motivated. Besides that, travel
+                                            gains popularity every day, and more and more people prefer to be location
+                                            independent.
+
+                                        </p>
+                                        <p>
+                                            The freedom of working from home or working while traveling is great, but it
+                                            has some downsides too. To work
+                                            effectively, we need good internet, a comfortable workplace, and someone to
+                                            brainstorm with once in a while. And that’s
+                                            precisely why coworking spaces became so popular. They bring freelancers,
+                                            small businesses, and travelers everything
+                                            they need to work effectively and stay motivated.
+                                        </p>
+                                    </div>
+                                    <div class="post__right">
+                                        <p>
+                                            But what exactly are the needs of these coworkers? At Anda, we have a lot of
+                                            experience with different coworking spaces.
+                                            We have visited many of them all over the world, and we have spoken to many
+                                            coworkers and owners of different spaces.
+                                            Based on what we have heard around us, we created a list of the boxes we
+                                            think a perfect coworking space should tick.
+                                        </p>
+                                        <div data-da=".post__text,992,0" class="post__wrap-img">
+                                            <img class="post__img post__img--left-radius" src="images/post/2.jpg"
+                                                alt="Lou Samantha" width="580" height="628">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                @@include('../components/_next-post.html', {
+                "name-img":"4",
+                "next-post-title": "How To Improve Employees Morale?",
+                "next-post-link": "post-four.html"
+                })
+
+            </main>
+
+        </div>
+
+        @@include('../components/_footer.html')
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

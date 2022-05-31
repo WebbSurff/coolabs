@@ -36,6 +36,10 @@
             padding: 50px 10px;
         }
 
+        @include hl {
+            padding: 20px 10px;
+        }
+
         @include m($sm) {
             padding: 35px 10px;
         }
@@ -95,6 +99,10 @@
 
         @include m($xl) {
             padding: 17px 85px;
+        }
+
+        @include hl {
+            padding: 13px 58px;
         }
 
         @include m($sm) {

@@ -50,6 +50,10 @@
             height: 350px;
         }
 
+        @include hl {
+            height: 250px;
+        }
+
         @include m($sm) {
             height: 250px;
         }
@@ -157,6 +161,9 @@
         }
     }
 
+    &__author-link {
+        transition: color 0.3s;
+    }
 
     &__date {
         margin-bottom: 65px;

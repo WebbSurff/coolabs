@@ -64,7 +64,7 @@
 
         @include m($xxl) {
             max-width: 620px;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
         }
     }
 
@@ -89,6 +89,7 @@
     &__form-wrap {
         flex: 0 1 33%;
         margin-bottom: 64px;
+        position: relative;
 
         &--email {
             flex: 0 1 60%;
@@ -107,7 +108,7 @@
         }
 
         @include m($xxl) {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
     }
 
@@ -137,6 +138,8 @@
         padding: 18px 18px 18px 0;
         display: block;
         border-bottom: 1px solid $main-color;
+        font-size: 21px;
+        transition: margin-top 0.3s;
 
         @include hl {
             margin-top: 5px;
@@ -157,6 +160,28 @@
             @include m($sm) {
                 font-size: 18px;
             }
+        }
+
+        &.just-validate-error-field {
+            transition: outline-color 0.3s;
+
+            &:focus {
+                outline-color: #d84c4c;
+            }
+        }
+    }
+
+    .just-validate-error-label {
+        position: absolute;
+        left: 0;
+        top: -26px;
+        font-size: 21px;
+        font-weight: 500;
+        color: #d84c4c;
+
+        @include m($sm) {
+            top: -29px;
+            font-size: 18px;
         }
     }
 
